@@ -1,95 +1,150 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <div>
+      <p>Hi, my name is Denlie.</p>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <p>I’m a Full-Stack Web and Blockchain Developer.</p>
+      <p>
+        I specialise in React for the frontend, Node.js for the backend and
+        Solidity for blockchain development. My professional experience revolves
+        around the fintech, cryptocurrency and web3 industry.
+      </p>
+      <p>
+        In 2017, I first dabbled in programming during my free time before
+        beginning my studies at Nanyang Business School, Nanyang Technological
+        University. Initially, I aspired to pursue finance but realized it
+        wasn't my passion. During my last semester in 2021, I made a career
+        switch, drawn to programming.
+      </p>
+      <p>
+        I began with Microsoft Excel VBA, seeing it as an asset for finance, but
+        my interest grew. I took a semester off to learn programming and
+        interned at a fintech company, initially in support but later
+        transitioning to programming. After completing my degree at the end of
+        2021, I officially embraced the role of a web developer.
+      </p>
+      <p>
+        Since then, I've cherished each day as a programmer, continuously honing
+        my skills, exploring new technologies, and working on personal projects
+        in my free time.
+      </p>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      {/* <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias numquam,
+        nam quis quam maxime quaerat voluptatibus ut, ab ad rerum, perspiciatis
+        facere. Rem eligendi ex iusto sequi odit at neque. Lorem, ipsum dolor.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum
+        unde tempora quod autem deleniti impedit recusandae suscipit dolor,
+        delectus eius totam quibusdam iusto, iste sint optio quam facilis
+        officiis? Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        Corporis illo porro qui dicta sint vero, laborum iusto repudiandae
+        quibusdam aspernatur cum et sapiente vel sequi libero. Inventore facere
+        recusandae necessitatibus? Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Aspernatur laudantium, beatae provident quibusdam
+        saepe eaque, atque repellendus illum at tenetur ipsam illo magni placeat
+        architecto modi vero repellat nulla impedit!Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Alias numquam, nam quis quam maxime
+        quaerat voluptatibus ut, ab ad rerum, perspiciatis facere. Rem eligendi
+        ex iusto sequi odit at neque. Lorem, ipsum dolor. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Facere illum unde tempora quod autem
+        deleniti impedit recusandae suscipit dolor, delectus eius totam
+        quibusdam iusto, iste sint optio quam facilis officiis? Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Corporis illo porro qui
+        dicta sint vero, laborum iusto repudiandae quibusdam aspernatur cum et
+        sapiente vel sequi libero. Inventore facere recusandae necessitatibus?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
+        laudantium, beatae provident quibusdam saepe eaque, atque repellendus
+        illum at tenetur ipsam illo magni placeat architecto modi vero repellat
+        nulla impedit!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Alias numquam, nam quis quam maxime quaerat voluptatibus ut, ab ad
+        rerum, perspiciatis facere. Rem eligendi ex iusto sequi odit at neque.
+        Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Facere illum unde tempora quod autem deleniti impedit recusandae
+        suscipit dolor, delectus eius totam quibusdam iusto, iste sint optio
+        quam facilis officiis? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Corporis illo porro qui dicta sint vero, laborum iusto
+        repudiandae quibusdam aspernatur cum et sapiente vel sequi libero.
+        Inventore facere recusandae necessitatibus? Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Aspernatur laudantium, beatae provident
+        quibusdam saepe eaque, atque repellendus illum at tenetur ipsam illo
+        magni placeat architecto modi vero repellat nulla impedit!Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Alias numquam, nam quis
+        quam maxime quaerat voluptatibus ut, ab ad rerum, perspiciatis facere.
+        Rem eligendi ex iusto sequi odit at neque. Lorem, ipsum dolor. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Facere illum unde
+        tempora quod autem deleniti impedit recusandae suscipit dolor, delectus
+        eius totam quibusdam iusto, iste sint optio quam facilis officiis? Lorem
+        ipsum dolor sit amet consectetur, adipisicing elit. Corporis illo porro
+        qui dicta sint vero, laborum iusto repudiandae quibusdam aspernatur cum
+        et sapiente vel sequi libero. Inventore facere recusandae
+        necessitatibus? Lorem ipsum dolor sit, amet consectetur adipisicing
+        elit. Aspernatur laudantium, beatae provident quibusdam saepe eaque,
+        atque repellendus illum at tenetur ipsam illo magni placeat architecto
+        modi vero repellat nulla impedit!Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Alias numquam, nam quis quam maxime quaerat
+        voluptatibus ut, ab ad rerum, perspiciatis facere. Rem eligendi ex iusto
+        sequi odit at neque. Lorem, ipsum dolor. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Facere illum unde tempora quod autem
+        deleniti impedit recusandae suscipit dolor, delectus eius totam
+        quibusdam iusto, iste sint optio quam facilis officiis? Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Corporis illo porro qui
+        dicta sint vero, laborum iusto repudiandae quibusdam aspernatur cum et
+        sapiente vel sequi libero. Inventore facere recusandae necessitatibus?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
+        laudantium, beatae provident quibusdam saepe eaque, atque repellendus
+        illum at tenetur ipsam illo magni placeat architecto modi vero repellat
+        nulla impedit!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Alias numquam, nam quis quam maxime quaerat voluptatibus ut, ab ad
+        rerum, perspiciatis facere. Rem eligendi ex iusto sequi odit at neque.
+        Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Facere illum unde tempora quod autem deleniti impedit recusandae
+        suscipit dolor, delectus eius totam quibusdam iusto, iste sint optio
+        quam facilis officiis? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Corporis illo porro qui dicta sint vero, laborum iusto
+        repudiandae quibusdam aspernatur cum et sapiente vel sequi libero.
+        Inventore facere recusandae necessitatibus? Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Aspernatur laudantium, beatae provident
+        quibusdam saepe eaque, atque repellendus illum at tenetur ipsam illo
+        magni placeat architecto modi vero repellat nulla impedit!Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Alias numquam, nam quis
+        quam maxime quaerat voluptatibus ut, ab ad rerum, perspiciatis facere.
+        Rem eligendi ex iusto sequi odit at neque. Lorem, ipsum dolor. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Facere illum unde
+        tempora quod autem deleniti impedit recusandae suscipit dolor, delectus
+        eius totam quibusdam iusto, iste sint optio quam facilis officiis? Lorem
+        ipsum dolor sit amet consectetur, adipisicing elit. Corporis illo porro
+        qui dicta sint vero, laborum iusto repudiandae quibusdam aspernatur cum
+        et sapiente vel sequi libero. Inventore facere recusandae
+        necessitatibus? Lorem ipsum dolor sit, amet consectetur adipisicing
+        elit. Aspernatur laudantium, beatae provident quibusdam saepe eaque,
+        atque repellendus illum at tenetur ipsam illo magni placeat architecto
+        modi vero repellat nulla impedit!Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Alias numquam, nam quis quam maxime quaerat
+        voluptatibus ut, ab ad rerum, perspiciatis facere. Rem eligendi ex iusto
+        sequi odit at neque. Lorem, ipsum dolor. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Facere illum unde tempora quod autem
+        deleniti impedit recusandae suscipit dolor, delectus eius totam
+        quibusdam iusto, iste sint optio quam facilis officiis? Lorem ipsum
+        dolor sit amet consectetur, adipisicing elit. Corporis illo porro qui
+        dicta sint vero, laborum iusto repudiandae quibusdam aspernatur cum et
+        sapiente vel sequi libero. Inventore facere recusandae necessitatibus?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
+        laudantium, beatae provident quibusdam saepe eaque, atque repellendus
+        illum at tenetur ipsam illo magni placeat architecto modi vero repellat
+        nulla impedit!Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Alias numquam, nam quis quam maxime quaerat voluptatibus ut, ab ad
+        rerum, perspiciatis facere. Rem eligendi ex iusto sequi odit at neque.
+        Lorem, ipsum dolor. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Facere illum unde tempora quod autem deleniti impedit recusandae
+        suscipit dolor, delectus eius totam quibusdam iusto, iste sint optio
+        quam facilis officiis? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Corporis illo porro qui dicta sint vero, laborum iusto
+        repudiandae quibusdam aspernatur cum et sapiente vel sequi libero.
+        Inventore facere recusandae necessitatibus? Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Aspernatur laudantium, beatae provident
+        quibusdam saepe eaque, atque repellendus illum at tenetur ipsam illo
+        magni placeat architecto modi vero repellat nulla impedit!
+      </p> */}
+    </div>
+  );
 }

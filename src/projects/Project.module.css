@@ -1,0 +1,29 @@
+/* Project.module.css */
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .container:hover {
+    background-color: grey;
+    cursor: pointer;
+  }
+  
+  .image {
+    margin-right: 20px; /* Add margin to separate the image from text */
+  }
+  
+  .details {
+    flex-grow: 1; /* Allow details to take up remaining space */
+  }
+  
+  .name {
+    font-weight: bold;
+  }
+  
+  .description {
+    margin-top: 5px; /* Add some space between name and description */
+  }
+  
