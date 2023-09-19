@@ -1,9 +1,9 @@
 .logo {
-    cursor: pointer; /* Add pointer cursor on hover */
-    transition: color 0.2s; /* Smooth color transition on hover */
-  }
-  
-  .logo:hover {
-    color: #0077b5 !important; 
-    background-color: #0077b5 !important;
-  }
+  cursor: pointer; /* Add pointer cursor on hover */
+  transition: color 0.2s; /* Smooth color transition on hover */
+  border-radius: 10px;
+}
+
+.logo:hover {
+  background-color: #040153 !important;
+}

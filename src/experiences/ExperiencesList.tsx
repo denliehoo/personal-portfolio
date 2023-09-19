@@ -7,6 +7,9 @@ const ExperiencesList = () => {
     <div>
       <Experience />
       <Experience />
+      <Experience />
+      <Experience />
+      <Experience />
     </div>
   );
 };

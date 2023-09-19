@@ -1,25 +1,48 @@
 /* RootLayout.css */
+.bodyStyle {
+  overflow: hidden;
+}
 
 .container {
   display: flex;
   justify-content: center;
-  padding-left: 200px;
-  padding-right: 100px;
+  padding-left: 100px;
+  padding-right: 50px;
+  margin: 5vh;
+  height: 90vh;
+  overflow: hidden;
+  border: 1px solid wheat;
 }
 
 .left {
   margin-right: 20px;
-  top: 50px;
-  position: sticky;
-  align-self: flex-start; /* Align to the top of the container */
-  height: 100%; /* Set the height to occupy the entire left div */
+  margin-top: 10px;
 }
 
 .right {
   flex: 1;
   margin-left: 200px;
-  margin-top: 50px;
+  margin-top: 20px;
+  height: 90%;
+  overflow: auto;
 }
+
+/* .right::-webkit-scrollbar {
+  width: 10px;
+}
+
+.right::-webkit-scrollbar-track {
+  background: rgba(128, 128, 128, 0.116);
+  border-radius: 20px;
+}
+
+.right::-webkit-scrollbar-thumb {
+  background-color: wheat;
+  border-radius: 20px;
+}
+.right::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+} */
 
 .navLinks {
   display: flex;
@@ -32,7 +55,6 @@
   color: inherit; /* Inherit the text color from the parent */
   width: fit-content;
 }
-
 
 .navLinks a:visited {
   color: inherit; /* Set the color for visited links */

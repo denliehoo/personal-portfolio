@@ -3,6 +3,8 @@
 import Link from "next/link";
 import classes from "./layout.module.css";
 import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
+import "./globals.css";
+import type { Metadata } from "next";
 
 export default function RootLayout({
   children,
@@ -11,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ overflow: "hidden" }}>
         <div className={classes.container}>
           <div className={classes.left}>
             <div>
@@ -40,7 +42,9 @@ export default function RootLayout({
               />
             </div>
           </div>
-          <div className={classes.right}>{children}</div>
+          <div className={classes.right}>
+            <div className={classes.children}>{children}</div>
+          </div>
         </div>
       </body>
     </html>
