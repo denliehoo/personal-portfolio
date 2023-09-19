@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react";
 import styles from "./Modal.module.css";
 
@@ -45,7 +47,13 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
       <div className={styles.modalContent}>
         <div className={styles.modalHeader}>
           <h2 className={styles.modalTitle}>{title}</h2>
-          <button className={styles.modalClose} onClick={onClose}>
+          <button
+            className={styles.modalClose}
+            style={{ cursor: "pointer" }}
+            onClick={() => {
+              onClose();
+            }}
+          >
             &times;
           </button>
         </div>

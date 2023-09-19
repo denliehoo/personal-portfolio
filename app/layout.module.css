@@ -30,6 +30,7 @@
   margin-bottom: 10px; /* Add spacing between each link */
   text-decoration: none; /* Remove underlines */
   color: inherit; /* Inherit the text color from the parent */
+  width: fit-content;
 }
 
 
@@ -38,14 +39,4 @@
 }
 .navLinks a:hover {
   color: red; /* Set the color for visited links */
-}
-
-.logo {
-  cursor: pointer; /* Add pointer cursor on hover */
-  transition: color 0.2s; /* Smooth color transition on hover */
-}
-
-.logo:hover {
-  color: #0077b5; 
-  background-color: #0077b5 !important;
 }

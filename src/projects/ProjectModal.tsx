@@ -3,7 +3,7 @@
 import React, { FC, useState } from "react";
 import classes from "./ProjectModal.module.css";
 import Modal from "../ui/Modal/Modal";
-import Image from "next/image";
+import LogoRedirect from "../ui/LogoRedirect/LogoRedirect";
 
 interface ProjectModalProps {
   longDescription: string;
@@ -33,37 +33,31 @@ const ProjectModal: FC<ProjectModalProps> = ({
       <img src={imgSrc} style={{ height: "75%", width: "100%" }} />
       <div>
         {website && (
-          <Image
+          <LogoRedirect
             src="/website.svg"
             alt="Website Logo"
             width={30}
             height={30}
-            priority
-            className={classes.logo}
-            onClick={() => window.open(website, "_blank")}
+            url={website}
           />
         )}
         {github && (
-          <Image
+          <LogoRedirect
             src="/github.svg"
             alt="Github Logo"
             width={30}
             height={30}
-            priority
-            className={classes.logo}
-            onClick={() => window.open(github, "_blank")}
+            url={github}
           />
         )}
 
         {medium && (
-          <Image
+          <LogoRedirect
             src="/medium.svg"
             alt="Medium Logo"
             width={30}
             height={30}
-            priority
-            className={classes.logo}
-            onClick={() => window.open(medium, "_blank")}
+            url={medium}
           />
         )}
       </div>

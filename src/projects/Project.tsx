@@ -19,24 +19,26 @@ const github = "https://github.com/denliehoo/multi-swap";
 const Project = (props: any) => {
   const [modal, setModal] = useState(false);
   return (
-    <div
-      className={classes.container}
-      onClick={() => {
-        console.log("open mod");
-        setModal(true);
-      }}
-    >
-      <Image
-        src={imgSrc}
-        alt={imgAlt}
-        width={100}
-        height={56.25}
-        priority
-        className={classes.image}
-      />
-      <div className={classes.details}>
-        <div className={classes.name}>{name}</div>
-        <div className={classes.description}>{shortDescription}</div>
+    <>
+      <div
+        className={classes.container}
+        onClick={() => {
+          console.log("open mod");
+          setModal(true);
+        }}
+      >
+        <Image
+          src={imgSrc}
+          alt={imgAlt}
+          width={100}
+          height={56.25}
+          priority
+          className={classes.image}
+        />
+        <div className={classes.details}>
+          <div className={classes.name}>{name}</div>
+          <div className={classes.description}>{shortDescription}</div>
+        </div>
       </div>
       <ProjectModal
         longDescription={longDescription}
@@ -52,7 +54,7 @@ const Project = (props: any) => {
           setModal(false);
         }}
       />
-    </div>
+    </>
   );
 };
 

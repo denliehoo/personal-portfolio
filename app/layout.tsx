@@ -1,7 +1,8 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
-import classes from "./page.module.css";
+import classes from "./layout.module.css";
+import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
 
 export default function RootLayout({
   children,
@@ -23,30 +24,19 @@ export default function RootLayout({
               <Link href="/experiences"> Experiences </Link>
             </nav>
             <div>
-              <Image
+              <LogoRedirect
                 src="/github.svg"
                 alt="Github Logo"
                 width={50}
                 height={50}
-                priority
-                className={classes.logo}
-                onClick={() =>
-                  window.open("https://github.com/denliehoo", "_blank")
-                }
+                url="https://github.com/denliehoo"
               />
-              <Image
+              <LogoRedirect
                 src="/linkedin.svg"
                 alt="LinkedIn Logo"
                 width={50}
                 height={50}
-                priority
-                className={classes.logo}
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/denlie-hoo/",
-                    "_blank"
-                  )
-                }
+                url="https://www.linkedin.com/in/denlie-hoo/"
               />
             </div>
           </div>
