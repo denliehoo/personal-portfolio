@@ -6,7 +6,7 @@ import Modal from "../ui/Modal/Modal";
 import LogoRedirect from "../ui/LogoRedirect/LogoRedirect";
 
 interface ProjectModalProps {
-  longDescription: string;
+  longDescription: string[];
   medium: string;
   github: string;
   website: string;
@@ -30,7 +30,10 @@ const ProjectModal: FC<ProjectModalProps> = ({
 }) => {
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={name}>
-      <img src={imgSrc} style={{ height: "75%", width: "100%" }} />
+      <img
+        src={imgSrc}
+        style={{ height: "70%", width: "100%", margin: "10px 0" }}
+      />
       <div>
         {website && (
           <LogoRedirect
@@ -61,7 +64,9 @@ const ProjectModal: FC<ProjectModalProps> = ({
           />
         )}
       </div>
-      <p>{longDescription}</p>
+      {longDescription.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
     </Modal>
   );
 };
