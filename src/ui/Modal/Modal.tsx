@@ -49,7 +49,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, children }) => {
           <h2 className={styles.modalTitle}>{title}</h2>
           <button
             className={styles.modalClose}
-            style={{ cursor: "pointer" }}
+            style={{ cursor: "pointer", color: "wheat" }}
             onClick={() => {
               onClose();
             }}

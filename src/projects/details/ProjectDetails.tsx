@@ -1,10 +1,7 @@
-"use client";
-
-import { useState } from "react";
-import classes from "./Project.module.css";
-import Image from "next/image";
-import ProjectModal from "./ProjectModal";
 import Link from "next/link";
+import classes from "./ProjectDetails.module.css";
+import Image from "next/image";
+import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
 
 const imgSrc = "/multiswap.png";
 const imgAlt = "multiswap";
@@ -25,39 +22,51 @@ const medium =
 const website = "https://multiswap-b2243.web.app/";
 const github = "https://github.com/denliehoo/multi-swap";
 
-const Project = (props: any) => {
-  const [modal, setModal] = useState(false);
+const ProjectDetails = () => {
   return (
-    <>
-      <Link className={classes.container} href={`/projects/${path}`}>
-        <Image
-          src={imgSrc}
-          alt={imgAlt}
-          width={100}
-          height={56.25}
-          priority
-          className={classes.image}
+    <div className={classes.container}>
+      <div className={classes.top}>
+        <Link href="/projects" className={classes.back}>
+          &#8592; Back To Projects
+        </Link>
+
+        <h2>{name}</h2>
+      </div>
+
+      <img src={imgSrc} className={classes.image} />
+      {website && (
+        <LogoRedirect
+          src="/website.svg"
+          alt="Website Logo"
+          width={30}
+          height={30}
+          url={website}
         />
-        <div className={classes.details}>
-          <div className={classes.name}>{name}</div>
-          <div className={classes.description}>{shortDescription}</div>
-        </div>
-      </Link>
-      <ProjectModal
-        longDescription={longDescription}
-        medium={medium}
-        github={github}
-        website={website}
-        name={name}
-        isOpen={modal}
-        imgAlt={imgAlt}
-        imgSrc={imgSrc}
-        onClose={() => {
-          setModal(false);
-        }}
-      />
-    </>
+      )}
+      {github && (
+        <LogoRedirect
+          src="/github.svg"
+          alt="Github Logo"
+          width={30}
+          height={30}
+          url={github}
+        />
+      )}
+
+      {medium && (
+        <LogoRedirect
+          src="/medium.svg"
+          alt="Medium Logo"
+          width={30}
+          height={30}
+          url={medium}
+        />
+      )}
+      {longDescription.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+    </div>
   );
 };
 
-export default Project;
+export default ProjectDetails;

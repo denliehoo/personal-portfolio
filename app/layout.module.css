@@ -24,25 +24,9 @@
   margin-left: 200px;
   margin-top: 20px;
   height: 90%;
-  overflow: auto;
+  overflow-y: auto; /* Show vertical scrollbar when needed */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
-
-/* .right::-webkit-scrollbar {
-  width: 10px;
-}
-
-.right::-webkit-scrollbar-track {
-  background: rgba(128, 128, 128, 0.116);
-  border-radius: 20px;
-}
-
-.right::-webkit-scrollbar-thumb {
-  background-color: wheat;
-  border-radius: 20px;
-}
-.right::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-} */
 
 .navLinks {
   display: flex;
@@ -51,14 +35,10 @@
 
 .navLinks a {
   margin-bottom: 10px; /* Add spacing between each link */
-  text-decoration: none; /* Remove underlines */
   color: inherit; /* Inherit the text color from the parent */
   width: fit-content;
 }
 
-.navLinks a:visited {
-  color: inherit; /* Set the color for visited links */
-}
 .navLinks a:hover {
-  color: red; /* Set the color for visited links */
+  color: #d2b48c; /* Set the color for visited links */
 }

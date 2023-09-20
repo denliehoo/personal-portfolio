@@ -9,10 +9,10 @@ body {
   background-size: 300% 300%;
   background-image: linear-gradient(
     -45deg,
-    #02004e 0%,
-    #001e00 25%,
-    #02004e 51%,
-    #001e00 100%
+    #000000 0%,
+    #000725 25%,
+    #000000 51%,
+    #002900 100%
   );
   -webkit-animation: AnimateBG 10s ease infinite;
   animation: AnimateBG 10s ease infinite;
@@ -57,4 +57,12 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+}
+
+a {
+  text-decoration: none; /* Remove underlines */
+}
+
+a:visited {
+  color: inherit;
 }
