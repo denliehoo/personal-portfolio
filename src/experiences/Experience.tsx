@@ -12,15 +12,16 @@ const pointers = [
 const Experience = () => {
   return (
     <div className={classes.container}>
-      <div className={classes.date}>{date}</div>
-      <div className={classes.details}>
+      <div className={classes.top}>
         <div className={classes.title}>{title}</div>
-        <div className={classes.company}>{company}</div>
-        <div className={classes.pointers}>
-          {pointers.map((p) => (
-            <li>{p}</li>
-          ))}
-        </div>
+        <div className={classes.date}>{date}</div>
+      </div>
+
+      <div className={classes.company}>{company}</div>
+      <div className={classes.pointers}>
+        {pointers.map((p) => (
+          <li>{p}</li>
+        ))}
       </div>
     </div>
   );

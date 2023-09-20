@@ -1,11 +1,8 @@
 /* Experience.module.css */
 
 .container {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px; /* Optional margin between experience items */
-  padding: 20px;
+  padding: 20px 20px 20px 20px;
   transition: transform 0.2s;
 }
 .container:hover {
@@ -13,20 +10,19 @@
   color: #d2b48c;
 }
 
-.date {
-  font-size: 16px;
-  font-weight: bold;
-  margin-right: 10px; /* Optional spacing between date and details */
+.top {
+  display: flex;
+  justify-content: space-between;
 }
 
-.details {
-  flex-grow: 1;
+.date {
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .title {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
 .company {
