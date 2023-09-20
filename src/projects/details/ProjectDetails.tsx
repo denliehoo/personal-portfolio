@@ -34,34 +34,18 @@ const ProjectDetails = () => {
       </div>
 
       <img src={imgSrc} className={classes.image} />
-      {website && (
-        <LogoRedirect
-          src="/website.svg"
-          alt="Website Logo"
-          width={30}
-          height={30}
-          url={website}
-        />
-      )}
-      {github && (
-        <LogoRedirect
-          src="/github.svg"
-          alt="Github Logo"
-          width={30}
-          height={30}
-          url={github}
-        />
-      )}
+      <div className={classes.icons}>
+        {website && (
+          <LogoRedirect width={30} height={30} url={website} icon="website" />
+        )}
+        {github && (
+          <LogoRedirect width={30} height={30} url={github} icon="github" />
+        )}
 
-      {medium && (
-        <LogoRedirect
-          src="/medium.svg"
-          alt="Medium Logo"
-          width={30}
-          height={30}
-          url={medium}
-        />
-      )}
+        {medium && (
+          <LogoRedirect width={30} height={30} url={medium} icon="medium" />
+        )}
+      </div>
       {longDescription.map((paragraph) => (
         <p>{paragraph}</p>
       ))}

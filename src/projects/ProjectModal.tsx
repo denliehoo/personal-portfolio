@@ -36,32 +36,14 @@ const ProjectModal: FC<ProjectModalProps> = ({
       />
       <div>
         {website && (
-          <LogoRedirect
-            src="/website.svg"
-            alt="Website Logo"
-            width={30}
-            height={30}
-            url={website}
-          />
+          <LogoRedirect width={30} height={30} url={website} icon="website" />
         )}
         {github && (
-          <LogoRedirect
-            src="/github.svg"
-            alt="Github Logo"
-            width={30}
-            height={30}
-            url={github}
-          />
+          <LogoRedirect width={30} height={30} url={github} icon="github" />
         )}
 
         {medium && (
-          <LogoRedirect
-            src="/medium.svg"
-            alt="Medium Logo"
-            width={30}
-            height={30}
-            url={medium}
-          />
+          <LogoRedirect width={30} height={30} url={medium} icon="medium" />
         )}
       </div>
       {longDescription.map((paragraph) => (

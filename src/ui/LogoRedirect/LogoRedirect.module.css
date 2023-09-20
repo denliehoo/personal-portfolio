@@ -1,9 +1,10 @@
 .logo {
   cursor: pointer; /* Add pointer cursor on hover */
-  transition: color 0.2s; /* Smooth color transition on hover */
-  border-radius: 10px;
+  transition: transform 0.2s; /* Add a smooth transition effect */
+  fill: #f5deb3;
 }
 
 .logo:hover {
-  background-color: #040153 !important;
+  transform: scale(1.1);
+  fill: #d2b48c;
 }

@@ -25,20 +25,18 @@ export default function RootLayout({
               <Link href="/projects"> Projects </Link>
               <Link href="/experiences"> Experiences </Link>
             </nav>
-            <div>
+            <div className={classes.icons}>
               <LogoRedirect
-                src="/github.svg"
-                alt="Github Logo"
                 width={50}
                 height={50}
                 url="https://github.com/denliehoo"
+                icon="github"
               />
               <LogoRedirect
-                src="/linkedin.svg"
-                alt="LinkedIn Logo"
                 width={50}
                 height={50}
                 url="https://www.linkedin.com/in/denlie-hoo/"
+                icon="linkedIn"
               />
             </div>
           </div>

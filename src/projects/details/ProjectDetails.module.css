@@ -14,3 +14,9 @@
   width: 100%; /* Set the width to 100% of its container */
   height: auto; /* Automatically adjust the height to maintain the aspect ratio */
 }
+
+.icons {
+  display: flex;
+  margin-top: 5px;
+  gap: 10px; /* Adjust the value to control the spacing between items */
+}

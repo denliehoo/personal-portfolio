@@ -37,8 +37,15 @@
   margin-bottom: 10px; /* Add spacing between each link */
   color: inherit; /* Inherit the text color from the parent */
   width: fit-content;
+  transition: transform 0.2s; /* Add a smooth transition effect */
 }
 
 .navLinks a:hover {
   color: #d2b48c; /* Set the color for visited links */
+  transform: scale(1.1);
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
 }
