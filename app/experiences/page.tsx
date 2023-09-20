@@ -1,16 +1,17 @@
-// import classes from "./Experiences.module.css";
-
 import Experience from "@/src/experiences/Experience";
-import { connectToDatabase } from "@/src/utils";
 
 async function getExperiences() {
-  const { client, db } = await connectToDatabase();
-  const experiences = await db.collection("experiences").find().toArray();
-  client.close();
-  return experiences;
+  const res = await fetch(process.env.URL + "/api/experiences", {
+    cache: "force-cache",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
 }
 
-const Experiences = async () => {
+const ExperiencesPage = async () => {
   const experiences = await getExperiences();
 
   return (
@@ -25,4 +26,4 @@ const Experiences = async () => {
   );
 };
 
-export default Experiences;
+export default ExperiencesPage;

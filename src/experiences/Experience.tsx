@@ -12,8 +12,8 @@ const Experience: React.FC<{ experience: IExperience }> = ({ experience }) => {
 
       <div className={classes.company}>{company}</div>
       <div className={classes.pointers}>
-        {pointers.map((p) => (
-          <li>{p}</li>
+        {pointers.map((p, i) => (
+          <li key={i}>{p}</li>
         ))}
       </div>
     </div>

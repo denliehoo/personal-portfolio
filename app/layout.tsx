@@ -1,10 +1,13 @@
-"use client";
-
 import Link from "next/link";
 import classes from "./layout.module.css";
 import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
 import "./globals.css";
 import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Denlie Hoo",
+  description: "Denlie Hoo's developer portfolio",
+};
 
 export default function RootLayout({
   children,

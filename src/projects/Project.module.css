@@ -10,7 +10,7 @@
 
 .container:hover {
   color: #d2b48c;
-  transform: scale(1.05); /* Scale up the container slightly on hover */
+  transform: scale(1.02); /* Scale up the container slightly on hover */
   cursor: pointer;
 }
 

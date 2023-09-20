@@ -1,7 +1,4 @@
 /* RootLayout.css */
-.bodyStyle {
-  overflow: hidden;
-}
 
 .container {
   display: flex;
@@ -11,7 +8,7 @@
   margin: 5vh;
   height: 90vh;
   overflow: hidden;
-  border: 1px solid wheat;
+  border: 3px solid wheat;
 }
 
 .left {
@@ -42,7 +39,7 @@
 
 .navLinks a:hover {
   color: #d2b48c; /* Set the color for visited links */
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .icons {
