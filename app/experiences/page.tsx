@@ -1,11 +1,26 @@
 // import classes from "./Experiences.module.css";
 
-import ExperiencesList from "@/src/experiences/ExperiencesList";
+import Experience from "@/src/experiences/Experience";
+import { connectToDatabase } from "@/src/utils";
 
-const Experiences = () => {
+async function getExperiences() {
+  const { client, db } = await connectToDatabase();
+  const experiences = await db.collection("experiences").find().toArray();
+  client.close();
+  return experiences;
+}
+
+const Experiences = async () => {
+  const experiences = await getExperiences();
+
   return (
     <div>
-      <ExperiencesList />
+      {experiences.map((e: any) => (
+        <Experience
+          key={e._id.toString()}
+          experience={{ ...e, _id: e._id.toString() }}
+        />
+      ))}
     </div>
   );
 };

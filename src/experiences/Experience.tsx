@@ -1,15 +1,8 @@
+import { IExperience } from "../types";
 import classes from "./Experience.module.css";
 
-const date = "DEC 2021 - PRESENT";
-const title = "Web Developer";
-const company = "TLV Fintech Solutions";
-const pointers = [
-  "Did XXX",
-  "Did yyy in 10 working days to do something and something test test and that",
-  "Did ZZZ later finish more test",
-];
-
-const Experience = () => {
+const Experience: React.FC<{ experience: IExperience }> = ({ experience }) => {
+  const { date, title, company, pointers } = experience;
   return (
     <div className={classes.container}>
       <div className={classes.top}>
@@ -28,3 +21,12 @@ const Experience = () => {
 };
 
 export default Experience;
+
+// const date = "DEC 2021 - PRESENT";
+// const title = "Web Developer";
+// const company = "TLV Fintech Solutions";
+// const pointers = [
+//   "Did XXX",
+//   "Did yyy in 10 working days to do something and something test test and that",
+//   "Did ZZZ later finish more test",
+// ];
