@@ -1,10 +1,8 @@
-/* RootLayout.css */
-
 .container {
   display: flex;
   justify-content: center;
-  padding-left: 100px;
-  padding-right: 50px;
+  /* padding-left: 100px; */
+  /* padding-right: 50px; */
   margin: 5vh;
   height: 90vh;
   overflow: hidden;
@@ -12,15 +10,45 @@
 }
 
 .left {
-  margin-right: 20px;
   margin-top: 10px;
+  padding-left: 50px;
 }
 
 .right {
+  padding-right: 50px;
   flex: 1;
   margin-left: 200px;
   margin-top: 20px;
   height: 90%;
   overflow-y: auto; /* Show vertical scrollbar when needed */
   overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Media query for screens less than 1200px wide */
+@media (max-width: 1200px) {
+  .right {
+    margin-left: 100px;
+  }
+}
+
+/* Media query for screens less than 800px wide */
+@media (max-width: 900px) {
+  .right {
+    padding-right: 20px;
+    margin-left: 20px;
+  }
+  .left {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 680px) {
+  /* .right {
+    padding-right: 20px;
+    margin-left: 20px;
+  } */
+  /* Now, also create a new component which shows the hamburger menu in layout */
+  .left {
+    display: none;
+  }
 }

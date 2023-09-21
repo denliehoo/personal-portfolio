@@ -2,6 +2,8 @@
 
 - Responsiveness
 
+  - When less than around 680px, display a hamburger icon that instead opens a drawer upon clicking and shows the navbar there instead
+
 - Non-dev related:
   - Place projects and experiences in DB
   - Host project images on some website and ensure it is in the DB
