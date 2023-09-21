@@ -61,8 +61,13 @@ body {
 
 a {
   text-decoration: none; /* Remove underlines */
+  color: wheat;
 }
 
 a:visited {
   color: inherit;
+}
+
+a:hover {
+  color: #d2b48c;
 }

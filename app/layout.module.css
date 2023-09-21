@@ -38,7 +38,6 @@
 }
 
 .navLinks a:hover {
-  color: #d2b48c; /* Set the color for visited links */
   transform: scale(1.05);
 }
 

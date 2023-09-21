@@ -1,10 +1,7 @@
 ## TODO:
 
-- Error handling for API and calling the API to fetch data
-  - Maybe refactor out calling apis into a utils
-  - See if there is a way to just leave the connection to the database on (in the event that we want to revalidate instead of forcing cache only)
-  - See if there is a way to re-use error handling for calling api data
-- Loading / Error / Not found pages
+- The current path should be in the layout (e.g. if on projects, bold projects in nav bar); Might need to move layout to component and use client and usepathname
+- Configure error page
 - Responsiveness
 
 - Non-dev related:

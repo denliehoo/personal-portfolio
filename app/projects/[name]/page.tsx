@@ -1,17 +1,11 @@
 import ProjectDetails from "@/src/projects/details/ProjectDetails";
+import { getProject } from "@/src/utils/clientApi";
+import { redirect } from "next/navigation";
 
-const getProject = async (path: string) => {
-  const res = await fetch(process.env.URL + "/api/projects/" + path, {
-    cache: "force-cache",
-  });
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-};
 const ProjectDetailsPage = async ({ params }: any) => {
   const project: any = await getProject(params.name);
+  // if (!project) throw new Error("Project doesn't exist");
+  if (!project) redirect("/not-found");
   return (
     <>
       <ProjectDetails project={project} />

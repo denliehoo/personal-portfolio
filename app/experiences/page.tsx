@@ -1,15 +1,5 @@
 import Experience from "@/src/experiences/Experience";
-
-async function getExperiences() {
-  const res = await fetch(process.env.URL + "/api/experiences", {
-    cache: "force-cache",
-  });
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  return res.json();
-}
+import { getExperiences } from "@/src/utils/clientApi";
 
 const ExperiencesPage = async () => {
   const experiences = await getExperiences();

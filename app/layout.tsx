@@ -43,9 +43,7 @@ export default function RootLayout({
               />
             </div>
           </div>
-          <div className={classes.right}>
-            <div className={classes.children}>{children}</div>
-          </div>
+          <div className={classes.right}>{children}</div>
         </div>
       </body>
     </html>
