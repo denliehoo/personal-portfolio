@@ -1,26 +1,33 @@
-/* Project.module.css */
-
 .container {
   display: flex;
   align-items: center;
   color: wheat;
   padding: 20px;
   border-radius: 5px;
-  transition: background-color 0.2s, color 0.2s, transform 0.2s; /* Add transition for smooth effect */
+  cursor: pointer !important;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
 
 .container:hover {
   color: #d2b48c;
-  transform: scale(1.02); /* Scale up the container slightly on hover */
-  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.rightArrow {
+  display: none;
+}
+
+.container:hover .rightArrow {
+  display: inline;
+  transition: display 0.2s;
 }
 
 .image {
-  margin-right: 20px; /* Add margin to separate the image from text */
+  margin-right: 20px;
 }
 
 .details {
-  flex-grow: 1; /* Allow details to take up remaining space */
+  flex-grow: 1;
 }
 
 .name {
@@ -28,5 +35,5 @@
 }
 
 .description {
-  margin-top: 5px; /* Add some space between name and description */
+  margin-top: 5px;
 }

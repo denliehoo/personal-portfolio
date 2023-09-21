@@ -24,8 +24,3 @@
   overflow-y: auto; /* Show vertical scrollbar when needed */
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
-
-.icons {
-  display: flex;
-  gap: 10px;
-}

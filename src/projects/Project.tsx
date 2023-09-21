@@ -19,22 +19,22 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
   } = project;
 
   return (
-    <>
-      <Link className={classes.container} href={`/projects/${path}`}>
-        <Image
-          src={imgSrc}
-          alt={imgAlt}
-          width={100}
-          height={56.25}
-          priority
-          className={classes.image}
-        />
-        <div className={classes.details}>
-          <div className={classes.name}>{name}</div>
-          <div className={classes.description}>{shortDescription}</div>
+    <Link className={classes.container} href={`/projects/${path}`}>
+      <Image
+        src={imgSrc}
+        alt={imgAlt}
+        width={100}
+        height={56.25}
+        priority
+        className={classes.image}
+      />
+      <div className={classes.details}>
+        <div className={classes.name}>
+          {name} <span className={classes.rightArrow}>&rarr;</span>
         </div>
-      </Link>
-    </>
+        <div className={classes.description}>{shortDescription}</div>
+      </div>
+    </Link>
   );
 };
 

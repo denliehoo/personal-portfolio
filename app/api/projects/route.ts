@@ -5,7 +5,14 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const { client, db } = await connectToDatabase();
-  const projects = await db.collection("projects").find().toArray();
+  // highest to lowest importance
+  const projects = await db
+    .collection("projects")
+    .find()
+    .sort({ importance: -1 })
+    .toArray();
+
+  console.log(projects);
   client.close();
   console.log("fetching projects...");
   return NextResponse.json(projects);

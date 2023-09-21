@@ -21,21 +21,6 @@ export default function RootLayout({
         <div className={classes.container}>
           <div className={classes.left}>
             <Navbar />
-
-            <div className={classes.icons}>
-              <LogoRedirect
-                width={50}
-                height={50}
-                url="https://github.com/denliehoo"
-                icon="github"
-              />
-              <LogoRedirect
-                width={50}
-                height={50}
-                url="https://www.linkedin.com/in/denlie-hoo/"
-                icon="linkedIn"
-              />
-            </div>
           </div>
           <div className={classes.right}>{children}</div>
         </div>

@@ -1,6 +1,19 @@
+.name {
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.title {
+  min-height: 32px;
+  font-size: 24px;
+  font-style: italic;
+}
+
 .navLinks {
   display: flex;
   flex-direction: column;
+  margin: 50% 0;
 }
 
 .navLinks a {
@@ -20,4 +33,8 @@
   margin-left: 10px;
   transform: scale(1.05);
   color: #d2b48c !important;
+}
+.icons {
+  display: flex;
+  gap: 10px;
 }
