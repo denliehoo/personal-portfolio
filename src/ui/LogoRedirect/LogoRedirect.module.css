@@ -1,6 +1,6 @@
 .logo {
-  cursor: pointer; /* Add pointer cursor on hover */
-  transition: transform 0.2s; /* Add a smooth transition effect */
+  cursor: pointer;
+  transition: transform 0.2s;
   fill: #f5deb3;
 }
 

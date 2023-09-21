@@ -3,11 +3,15 @@ export default function Home() {
     <div>
       <p>Hi, my name is Denlie.</p>
 
-      <p>I’m a Full-Stack Web and Blockchain Developer.</p>
       <p>
-        I specialise in React for the frontend, Node.js for the backend and
-        Solidity for blockchain development. My professional experience revolves
-        around the fintech, cryptocurrency and web3 industry.
+        I’m a Software engineer specialised in full-stack web development and
+        blockchain development.
+      </p>
+      <p>
+        The tech stack that I mainly use is React for the frontend, Node.js and
+        MongoDB for the backend and Solidity for blockchain development. My
+        professional experience mainly revolves around the fintech,
+        cryptocurrency and web3 industry.
       </p>
       <p>
         In 2017, I first dabbled in programming during my free time before

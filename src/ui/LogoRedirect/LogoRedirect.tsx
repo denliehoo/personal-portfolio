@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import classes from "./LogoRedirect.module.css";
 
 interface LogoRedirectProps {
@@ -38,16 +37,6 @@ const LogoRedirect: React.FC<LogoRedirectProps> = ({
   icon,
 }) => {
   return (
-    // <Image
-    //   src={src}
-    //   alt={alt}
-    //   width={width}
-    //   height={height}
-    //   priority
-    //   className={classes.logo}
-    //   onClick={() => window.open(url, "_blank")}
-    // />
-
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="1em"

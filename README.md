@@ -1,6 +1,5 @@
 ## TODO:
 
-- Animate the "Full-stack developer | Blockchain Developer portion"; put spacing in left portion
 - Responsiveness
 
 - Non-dev related:
