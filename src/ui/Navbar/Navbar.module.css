@@ -1,0 +1,23 @@
+.navLinks {
+  display: flex;
+  flex-direction: column;
+}
+
+.navLinks a {
+  margin-bottom: 10px;
+  color: inherit;
+  width: fit-content;
+  transition: transform 0.2s;
+}
+
+.navLinks a:hover {
+  transform: scale(1.05);
+}
+
+.active {
+  font-weight: bold;
+  font-style: italic;
+  margin-left: 10px;
+  transform: scale(1.05);
+  color: #d2b48c !important;
+}

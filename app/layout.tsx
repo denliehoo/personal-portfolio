@@ -3,6 +3,7 @@ import classes from "./layout.module.css";
 import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
 import "./globals.css";
 import type { Metadata } from "next";
+import Navbar from "@/src/ui/Navbar/Navbar";
 
 export const metadata: Metadata = {
   title: "Denlie Hoo",
@@ -19,15 +20,8 @@ export default function RootLayout({
       <body style={{ overflow: "hidden" }}>
         <div className={classes.container}>
           <div className={classes.left}>
-            <div>
-              <h1>DENLIE HOO</h1>
-              <p>Full-Stack Developer | Blockchain Developer</p>
-            </div>
-            <nav className={classes.navLinks}>
-              <Link href="/"> About </Link>
-              <Link href="/projects"> Projects </Link>
-              <Link href="/experiences"> Experiences </Link>
-            </nav>
+            <Navbar />
+
             <div className={classes.icons}>
               <LogoRedirect
                 width={50}

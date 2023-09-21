@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./LoadingSpinner.module.css";
+import classes from "./Loader.module.css";
 
-const LoadingSpinner = () => {
+const Loader = () => {
   return (
     <div className={classes.container}>
       <div className={classes.loader}> / </div>
@@ -9,4 +9,4 @@ const LoadingSpinner = () => {
   );
 };
 
-export default LoadingSpinner;
+export default Loader;

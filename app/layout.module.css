@@ -25,22 +25,6 @@
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-.navLinks {
-  display: flex;
-  flex-direction: column; /* Stack the links vertically */
-}
-
-.navLinks a {
-  margin-bottom: 10px; /* Add spacing between each link */
-  color: inherit; /* Inherit the text color from the parent */
-  width: fit-content;
-  transition: transform 0.2s; /* Add a smooth transition effect */
-}
-
-.navLinks a:hover {
-  transform: scale(1.05);
-}
-
 .icons {
   display: flex;
   gap: 10px;

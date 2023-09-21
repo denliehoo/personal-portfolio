@@ -8,16 +8,12 @@
 
 .textContainer {
   text-align: center;
-  animation: blink 10s infinite;
+  animation: blink 8s infinite;
   margin-top: 40px;
   /*  */
   font-weight: bold;
   font-size: 24px;
 }
-/* .notFound {
-  font-weight: bold;
-  font-size: 24px;
-} */
 
 .eyes {
   position: relative;
@@ -35,7 +31,7 @@
   background-image: radial-gradient(circle 14px, #0d161b 100%, transparent 0);
   background-repeat: no-repeat;
   border-radius: 50%;
-  animation: eyeMove 10s infinite, blink 10s infinite;
+  animation: eyeMove 8s infinite, blink 8s infinite;
 }
 @keyframes eyeMove {
   0%,

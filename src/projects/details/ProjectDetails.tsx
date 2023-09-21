@@ -30,8 +30,8 @@ const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
           <LogoRedirect width={30} height={30} url={medium} icon="medium" />
         )}
       </div>
-      {longDescription.map((paragraph) => (
-        <p>{paragraph}</p>
+      {longDescription.map((paragraph, i) => (
+        <p key={i}>{paragraph}</p>
       ))}
     </div>
   );

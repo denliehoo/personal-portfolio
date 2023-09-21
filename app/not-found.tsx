@@ -1,5 +1,5 @@
-import NotFound from "@/src/NotFound/NotFound";
+import NotFoundOrError from "@/src/NotFoundOrError/NotFoundOrError";
 
 export default function NotFoundPage() {
-  return <NotFound />;
+  return <NotFoundOrError isError={false} />;
 }

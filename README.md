@@ -1,6 +1,5 @@
 ## TODO:
 
-- The current path should be in the layout (e.g. if on projects, bold projects in nav bar); Might need to move layout to component and use client and usepathname
 - Configure error page
 - Responsiveness
 
