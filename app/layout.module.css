@@ -11,7 +11,7 @@
 
 .left {
   margin-top: 10px;
-  padding-left: 50px;
+  padding-left: 100px;
 }
 
 .right {
@@ -22,6 +22,12 @@
   height: 90%;
   overflow-y: auto; /* Show vertical scrollbar when needed */
   overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+.top {
+  display: none;
+  padding: 10px;
+
+  border-bottom: 3px solid wheat;
 }
 
 /* Media query for screens less than 1200px wide */
@@ -42,13 +48,30 @@
   }
 }
 
+/* breaking point to hamburger menu */
 @media (max-width: 680px) {
   /* .right {
     padding-right: 20px;
     margin-left: 20px;
   } */
   /* Now, also create a new component which shows the hamburger menu in layout */
+  .container {
+    flex-direction: column;
+  }
+  .top {
+    display: inline;
+  }
   .left {
     display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .container {
+    margin: 2vh;
+    height: 96vh;
+  }
+  .right {
+    padding-right: 10px;
   }
 }

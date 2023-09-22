@@ -3,6 +3,13 @@
 - Responsiveness
 
   - When less than around 680px, display a hamburger icon that instead opens a drawer upon clicking and shows the navbar there instead
+  - Modal rename to backdrop; backdrop background should have the same gradient animation effect as body background
+  - Resonsive for experiences, projects, project details
+  - Revamp about page
+  - Does display: none also remove the element? Cause I might be having the code executed twice for Navbar when it is in lower screen px mode
+  - Maybe refactor more of the layout into a react component and use screenwidth hooks instead?
+
+- Maybe change layout background to a slightly lighter shade of blue and green; currently cant really see unless screen is bright enough
 
 - Non-dev related:
   - Place projects and experiences in DB

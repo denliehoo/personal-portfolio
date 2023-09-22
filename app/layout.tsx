@@ -4,6 +4,7 @@ import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/src/ui/Navbar/Navbar";
+import Hamburger from "@/src/ui/Navbar/Hamburger";
 
 export const metadata: Metadata = {
   title: "Denlie Hoo",
@@ -17,10 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ overflow: "hidden" }}>
+      <body>
         <div className={classes.container}>
           <div className={classes.left}>
             <Navbar />
+          </div>
+          <div className={classes.top}>
+            <Hamburger />
+            {/* <Navbar /> */}
           </div>
           <div className={classes.right}>{children}</div>
         </div>

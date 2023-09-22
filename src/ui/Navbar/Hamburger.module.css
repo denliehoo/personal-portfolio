@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  fill: wheat;
+  transition: transform 0.2s fill 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  fill: #d2b48c;
+}
+
+.path {
+  font-weight: bold;
+}
+
+.backdrop {
+  position: fixed;
+  top: 100vh;
+  width: 100vh;
+  border: 1 px solid red;
+  background-color: inherit;
+}

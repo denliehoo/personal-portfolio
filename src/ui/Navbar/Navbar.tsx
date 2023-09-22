@@ -6,11 +6,17 @@ import { usePathname } from "next/navigation";
 import LogoRedirect from "../LogoRedirect/LogoRedirect";
 import TypingEffect from "./TypingEffect";
 
-const Navbar = () => {
+const Navbar = (props: any) => {
+  const { isSmallScreen, closeMenu } = props;
+  const onClickLink = () => {
+    if (isSmallScreen) {
+      closeMenu();
+    }
+  };
   const path = usePathname();
 
   return (
-    <>
+    <div className={classes.container}>
       <div className={classes.name}>DENLIE HOO</div>
       <div className={classes.title}>
         <TypingEffect />
@@ -18,18 +24,24 @@ const Navbar = () => {
       </div>
 
       <nav className={classes.navLinks}>
-        <Link href="/" className={path === "/" ? classes.active : ""}>
+        <Link
+          href="/"
+          className={path === "/" ? classes.active : ""}
+          onClick={onClickLink}
+        >
           About
         </Link>
         <Link
           href="/projects"
           className={path.startsWith("/projects") ? classes.active : ""}
+          onClick={onClickLink}
         >
           Projects
         </Link>
         <Link
           href="/experiences"
           className={path === "/experiences" ? classes.active : ""}
+          onClick={onClickLink}
         >
           Experiences
         </Link>
@@ -49,7 +61,7 @@ const Navbar = () => {
           icon="linkedIn"
         />
       </div>
-    </>
+    </div>
   );
 };
 
