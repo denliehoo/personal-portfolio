@@ -1,17 +1,15 @@
 body {
   overflow: hidden;
-  /* font-family: "Courier New", Courier, monospace; */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: wheat;
-  /* align-items: center; */
-  /* justify-content: center; */
+
   background-size: 300% 300%;
   background-image: linear-gradient(
     -45deg,
     #000000 0%,
-    #000725 25%,
+    #000c45 25%,
     #000000 51%,
-    #002900 100%
+    #004a00 100%
   );
   -webkit-animation: AnimateBG 10s ease infinite;
   animation: AnimateBG 10s ease infinite;

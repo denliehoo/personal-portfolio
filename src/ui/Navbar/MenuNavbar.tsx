@@ -1,14 +1,13 @@
 "use client";
 import { useState } from "react";
-import classes from "./Hamburger.module.css";
+import classes from "./MenuNavbar.module.css";
 import { usePathname } from "next/navigation";
-import Modal from "../Modal/Modal";
 import Navbar from "./Navbar";
+import Backdrop from "../Modal/Backdrop";
 
-const Hamburger = () => {
-  const [menu, setMenu] = useState(false); // true by default [rmb change back]
+const MenuNavbar = () => {
+  const [menu, setMenu] = useState(true); // true by default [rmb change back]
   const path = usePathname();
-  console.log(path);
 
   const getActivePath = (path: string) => {
     if (path === "/") {
@@ -28,10 +27,10 @@ const Hamburger = () => {
   return (
     <>
       <div className={classes.container}>
-        <div className={classes.path}>Denlie Hoo - {activePath}</div>
-        {/* <div onClick={() => setMenu(true)} className={classes.icon}>
-          {icon}
-        </div> */}
+        <div>
+          <div className={classes.name}>DENLIE HOO</div>
+          <div className={classes.active}>{activePath}</div>
+        </div>
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +44,12 @@ const Hamburger = () => {
         </div>
       </div>
       {menu && (
-        <Modal isOpen={menu} onClose={() => setMenu(false)} title="">
+        <Backdrop isOpen={menu} onClose={() => setMenu(false)}>
           <Navbar isSmallScreen={true} closeMenu={() => setMenu(false)} />
-        </Modal>
+        </Backdrop>
       )}
     </>
   );
 };
 
-export default Hamburger;
+export default MenuNavbar;

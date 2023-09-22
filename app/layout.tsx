@@ -1,10 +1,8 @@
-import Link from "next/link";
 import classes from "./layout.module.css";
-import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
 import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/src/ui/Navbar/Navbar";
-import Hamburger from "@/src/ui/Navbar/Hamburger";
+import MenuNavbar from "@/src/ui/Navbar/MenuNavbar";
 
 export const metadata: Metadata = {
   title: "Denlie Hoo",
@@ -24,8 +22,7 @@ export default function RootLayout({
             <Navbar />
           </div>
           <div className={classes.top}>
-            <Hamburger />
-            {/* <Navbar /> */}
+            <MenuNavbar />
           </div>
           <div className={classes.right}>{children}</div>
         </div>

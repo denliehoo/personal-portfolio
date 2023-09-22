@@ -2,9 +2,10 @@
 
 - Responsiveness
 
-  - When less than around 680px, display a hamburger icon that instead opens a drawer upon clicking and shows the navbar there instead
-  - Modal rename to backdrop; backdrop background should have the same gradient animation effect as body background
-  - Resonsive for experiences, projects, project details
+  - When less than around 680px, display a hamburger icon that instead opens a drawer upon clicking and shows the navbar there instead [ok]
+  - Responsiveness for experiences, projects, project details [ok]
+  - Modal rename to backdrop; backdrop background should have the same gradient animation effect as body background [ok]
+  - Find a way to reverse the slide in for backdrop content upon closing
   - Revamp about page
   - Does display: none also remove the element? Cause I might be having the code executed twice for Navbar when it is in lower screen px mode
   - Maybe refactor more of the layout into a react component and use screenwidth hooks instead?
