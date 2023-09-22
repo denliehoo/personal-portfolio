@@ -43,11 +43,11 @@ const MenuNavbar = () => {
           </svg>
         </div>
       </div>
-      {menu && (
+      {
         <Backdrop isOpen={menu} onClose={() => setMenu(false)}>
           <Navbar isSmallScreen={true} closeMenu={() => setMenu(false)} />
         </Backdrop>
-      )}
+      }
     </>
   );
 };

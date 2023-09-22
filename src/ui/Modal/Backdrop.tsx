@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./Backdrop.module.css";
 
 interface BackdropProps {
@@ -10,17 +10,25 @@ interface BackdropProps {
 }
 
 const Backdrop: React.FC<BackdropProps> = ({ isOpen, onClose, children }) => {
-  const closeModal = () => {
+  const [isBackDropOpen, setIsBackDropOpen] = useState(isOpen);
+
+  useEffect(() => {
+    setIsBackDropOpen(isOpen);
+  }, [isOpen]);
+
+  const handleDrawerClose = () => {
+    setIsBackDropOpen(false);
     onClose();
   };
+
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        closeModal();
+        handleDrawerClose();
       }
     };
 
-    if (isOpen) {
+    if (isBackDropOpen) {
       document.addEventListener("keydown", handleEscape);
     } else {
       document.removeEventListener("keydown", handleEscape);
@@ -29,25 +37,29 @@ const Backdrop: React.FC<BackdropProps> = ({ isOpen, onClose, children }) => {
     return () => {
       document.removeEventListener("keydown", handleEscape);
     };
-  }, [isOpen, closeModal]);
-
-  if (!isOpen) return null;
+  }, [isBackDropOpen]);
 
   return (
-    <div className={classes.overlay}>
+    <div
+      className={[classes.overlay, isBackDropOpen ? classes.open : ""].join(
+        " "
+      )}
+    >
       <div className={classes.content}>
-        <div className={classes.closeContainer}>
-          <div
-            className={classes.close}
-            style={{ cursor: "pointer", color: "wheat" }}
-            onClick={() => {
-              onClose();
-            }}
-          >
-            &times;
+        <>
+          <div className={classes.closeContainer}>
+            <div
+              className={classes.close}
+              style={{ cursor: "pointer", color: "wheat" }}
+              onClick={() => {
+                handleDrawerClose();
+              }}
+            >
+              &times;
+            </div>
           </div>
-        </div>
-        {children}
+          {children}
+        </>
       </div>
     </div>
   );
