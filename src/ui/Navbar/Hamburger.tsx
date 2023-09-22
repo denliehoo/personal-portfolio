@@ -6,7 +6,7 @@ import Modal from "../Modal/Modal";
 import Navbar from "./Navbar";
 
 const Hamburger = () => {
-  const [menu, setMenu] = useState(true); // true by default
+  const [menu, setMenu] = useState(false); // true by default [rmb change back]
   const path = usePathname();
   console.log(path);
 

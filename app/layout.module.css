@@ -33,9 +33,17 @@
 /* Media query for screens less than 1200px wide */
 @media (max-width: 1200px) {
   .right {
-    margin-left: 100px;
+    margin-left: 50px;
+  }
+  .left {
+    padding-left: 50px;
   }
 }
+/* @media (max-width: 1000px) {
+  .right {
+    margin-left: 50px;
+  }
+} */
 
 /* Media query for screens less than 800px wide */
 @media (max-width: 900px) {

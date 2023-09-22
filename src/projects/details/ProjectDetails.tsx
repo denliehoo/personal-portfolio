@@ -14,7 +14,7 @@ const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
           &#8592; Back To Projects
         </Link>
 
-        <h2>{name}</h2>
+        <div className={classes.name}>{name}</div>
       </div>
 
       <img src={imgSrc} className={classes.image} alt={imgAlt} />
