@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar from "@/src/ui/Navbar/Navbar";
 import MenuNavbar from "@/src/ui/Navbar/MenuNavbar";
+import Layout from "@/src/ui/Layout/Layout";
 
 export const metadata: Metadata = {
   title: "Denlie Hoo",
@@ -17,15 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className={classes.container}>
-          <div className={classes.left}>
-            <Navbar />
-          </div>
-          <div className={classes.top}>
-            <MenuNavbar />
-          </div>
-          <div className={classes.right}>{children}</div>
-        </div>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

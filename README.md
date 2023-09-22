@@ -6,9 +6,10 @@
   - Responsiveness for experiences, projects, project details [ok]
   - Modal rename to backdrop; backdrop background should have the same gradient animation effect as body background [ok]
   - Find a way to reverse the slide in for backdrop content upon closing [ok]
-  - Does display: none also remove the element? Cause I might be having the code executed twice for Navbar when it is in lower screen px mode; Find a way to render content only when needed
+  - Refactor layout component [ok]
+  - Does display: none also remove the element? Cause I might be having the code executed twice for Navbar when it is in lower screen px mode; Find a way to render content only when needed [ok]
   - Revamp about page
-  - Maybe refactor more of the layout into a react component and use screenwidth hooks instead?
+  - Refactor components in src into a components folder
 
 - Maybe change layout background to a slightly lighter shade of blue and green; currently cant really see unless screen is bright enough
 

@@ -40,10 +40,10 @@
   }
 }
 /* @media (max-width: 1000px) {
-  .right {
-    margin-left: 50px;
-  }
-} */
+    .right {
+      margin-left: 50px;
+    }
+  } */
 
 /* Media query for screens less than 800px wide */
 @media (max-width: 900px) {
@@ -59,9 +59,9 @@
 /* breaking point to hamburger menu */
 @media (max-width: 680px) {
   /* .right {
-    padding-right: 20px;
-    margin-left: 20px;
-  } */
+      padding-right: 20px;
+      margin-left: 20px;
+    } */
   /* Now, also create a new component which shows the hamburger menu in layout */
   .container {
     flex-direction: column;

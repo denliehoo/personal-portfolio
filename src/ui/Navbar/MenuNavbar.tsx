@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
 import Backdrop from "../Modal/Backdrop";
 
-const MenuNavbar = () => {
-  const [menu, setMenu] = useState(true); // true by default [rmb change back]
+const MenuNavbar = ({ isJustOpened }: { isJustOpened: boolean }) => {
+  const [menu, setMenu] = useState(isJustOpened);
   const path = usePathname();
 
   const getActivePath = (path: string) => {
