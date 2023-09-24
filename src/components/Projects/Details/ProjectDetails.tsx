@@ -1,7 +1,6 @@
 import Link from "next/link";
 import classes from "./ProjectDetails.module.css";
-import Image from "next/image";
-import LogoRedirect from "@/src/ui/LogoRedirect/LogoRedirect";
+import LogoRedirect from "@/src/components/UI/LogoRedirect/LogoRedirect";
 import { IProject } from "@/src/types/index";
 
 const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {

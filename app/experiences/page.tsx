@@ -1,4 +1,4 @@
-import Experience from "@/src/experiences/Experience";
+import Experience from "@/src/components/Experiences/Experience";
 import { getExperiences } from "@/src/utils/clientApi";
 
 const ExperiencesPage = async () => {

@@ -1,4 +1,4 @@
-import Project from "@/src/projects/Project";
+import Project from "@/src/components/Projects/Project";
 import { getProjects } from "@/src/utils/clientApi";
 
 const ProjectsPage = async () => {

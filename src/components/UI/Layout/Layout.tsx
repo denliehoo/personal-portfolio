@@ -3,7 +3,7 @@ import { useWindowSize } from "@/src/hooks/useWindowSize";
 import MenuNavbar from "../Navbar/MenuNavbar";
 import Navbar from "../Navbar/Navbar";
 import classes from "./Layout.module.css";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Backdrop from "../Modal/Backdrop";
 import Loader from "../Loader/Loader";
 

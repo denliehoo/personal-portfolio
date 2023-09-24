@@ -1,4 +1,4 @@
-import { IExperience } from "../types";
+import { IExperience } from "../../types";
 import classes from "./Experience.module.css";
 
 const Experience: React.FC<{ experience: IExperience }> = ({ experience }) => {

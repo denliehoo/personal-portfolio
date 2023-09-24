@@ -1,7 +1,7 @@
 import { connectToDatabase } from "@/src/utils";
 import { NextRequest, NextResponse } from "next/server";
 
-// /api/projects
+// /api/projects/[name]
 
 export async function GET(request: NextRequest, { params }: any) {
   const { client, db } = await connectToDatabase();

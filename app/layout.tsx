@@ -1,9 +1,6 @@
-import classes from "./layout.module.css";
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "@/src/ui/Navbar/Navbar";
-import MenuNavbar from "@/src/ui/Navbar/MenuNavbar";
-import Layout from "@/src/ui/Layout/Layout";
+import Layout from "@/src/components/UI/Layout/Layout";
 
 export const metadata: Metadata = {
   title: "Denlie Hoo",

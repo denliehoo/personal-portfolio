@@ -3,7 +3,7 @@
 import classes from "./Project.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { IProject } from "../types";
+import { IProject } from "../../types";
 
 const Project: React.FC<{ project: IProject }> = ({ project }) => {
   const {

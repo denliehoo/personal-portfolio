@@ -1,4 +1,4 @@
-import ProjectDetails from "@/src/projects/details/ProjectDetails";
+import ProjectDetails from "@/src/components/Projects/Details/ProjectDetails";
 import { getProject } from "@/src/utils/clientApi";
 import { redirect } from "next/navigation";
 

@@ -1,5 +1,6 @@
 ## TODO:
 
+- Maybe change layout background to a slightly lighter shade of blue and green; currently cant really see unless screen is bright enough [ok]
 - Responsiveness
 
   - When less than around 680px, display a hamburger icon that instead opens a drawer upon clicking and shows the navbar there instead [ok]
@@ -9,10 +10,8 @@
   - Refactor layout component [ok]
   - Does display: none also remove the element? Cause I might be having the code executed twice for Navbar when it is in lower screen px mode; Find a way to render content only when needed [ok]
   - When entering page for the first time, there is a pause before the left side navbar appears (for >680px) [ok]
+  - Refactor components in src into a components folder[ok]
   - Revamp about page
-  - Refactor components in src into a components folder
-
-- Maybe change layout background to a slightly lighter shade of blue and green; currently cant really see unless screen is bright enough
 
 - Non-dev related:
   - Place projects and experiences in DB
