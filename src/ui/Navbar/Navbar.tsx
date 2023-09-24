@@ -20,7 +20,6 @@ const Navbar = (props: any) => {
       <div className={classes.name}>DENLIE HOO</div>
       <div className={classes.title}>
         <TypingEffect />
-        {/* Full-Stack Developer | Blockchain Developer */}
       </div>
 
       <nav className={classes.navLinks}>

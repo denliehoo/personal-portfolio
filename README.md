@@ -8,6 +8,7 @@
   - Find a way to reverse the slide in for backdrop content upon closing [ok]
   - Refactor layout component [ok]
   - Does display: none also remove the element? Cause I might be having the code executed twice for Navbar when it is in lower screen px mode; Find a way to render content only when needed [ok]
+  - When entering page for the first time, there is a pause before the left side navbar appears (for >680px) [ok]
   - Revamp about page
   - Refactor components in src into a components folder
 

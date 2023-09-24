@@ -44,7 +44,7 @@ const MenuNavbar = ({ isJustOpened }: { isJustOpened: boolean }) => {
         </div>
       </div>
       {
-        <Backdrop isOpen={menu} onClose={() => setMenu(false)}>
+        <Backdrop isOpen={menu} onClose={() => setMenu(false)} closable={true}>
           <Navbar isSmallScreen={true} closeMenu={() => setMenu(false)} />
         </Backdrop>
       }
