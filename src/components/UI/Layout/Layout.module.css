@@ -1,12 +1,11 @@
 .container {
   display: flex;
   justify-content: center;
-  /* padding-left: 100px; */
-  /* padding-right: 50px; */
   margin: 5vh;
   height: 90vh;
   overflow: hidden;
   border: 3px solid wheat;
+  border-radius: 10px;
 }
 
 .left {
@@ -39,11 +38,6 @@
     padding-left: 50px;
   }
 }
-/* @media (max-width: 1000px) {
-    .right {
-      margin-left: 50px;
-    }
-  } */
 
 /* Media query for screens less than 800px wide */
 @media (max-width: 900px) {
@@ -58,11 +52,6 @@
 
 /* breaking point to hamburger menu */
 @media (max-width: 680px) {
-  /* .right {
-      padding-right: 20px;
-      margin-left: 20px;
-    } */
-  /* Now, also create a new component which shows the hamburger menu in layout */
   .container {
     flex-direction: column;
   }
@@ -81,5 +70,14 @@
   }
   .right {
     padding-right: 10px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .container {
+    /* margin: 10vh; */
+    height: 70vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
   }
 }

@@ -12,12 +12,18 @@
   - When entering page for the first time, there is a pause before the left side navbar appears (for >680px) [ok]
   - Refactor components in src into a components folder[ok]
   - Revamp about page
+  - Maybe change to continuous scrolling app
 
 - Non-dev related:
   - Place projects and experiences in DB
   - Host project images on some website and ensure it is in the DB
   - Do a guideline on images that should be uploaded
   - Do medium article for any important projects
+
+## inspiraations:
+
+- https://dunks1980.com/
+- https://brittanychiang.com/#about
 
 ## .env
 
