@@ -27,24 +27,6 @@ const Backdrop: React.FC<BackdropProps> = ({
     onClose();
   };
 
-  useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        handleDrawerClose();
-      }
-    };
-
-    if (isBackDropOpen) {
-      document.addEventListener("keydown", handleEscape);
-    } else {
-      document.removeEventListener("keydown", handleEscape);
-    }
-
-    return () => {
-      document.removeEventListener("keydown", handleEscape);
-    };
-  }, [isBackDropOpen]);
-
   return (
     <div
       className={[classes.overlay, isBackDropOpen ? classes.open : ""].join(

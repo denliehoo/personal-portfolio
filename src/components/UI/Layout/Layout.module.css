@@ -1,11 +1,20 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
   margin: 5vh;
   height: 90vh;
   overflow: hidden;
   border: 3px solid wheat;
   border-radius: 10px;
+  /* bottom 2 might cause issues */
+  max-width: 1600px;
+  min-width: 95vw;
 }
 
 .left {
@@ -19,7 +28,7 @@
   margin-left: 200px;
   margin-top: 20px;
   height: 90%;
-  overflow-y: auto; /* Show vertical scrollbar when needed */
+  overflow-y: auto;
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 .top {
@@ -52,7 +61,7 @@
 
 /* breaking point to hamburger menu */
 @media (max-width: 680px) {
-  .container {
+  .card {
     flex-direction: column;
   }
   .top {
@@ -64,7 +73,7 @@
 }
 
 @media (max-width: 420px) {
-  .container {
+  .card {
     margin: 2vh;
     height: 96vh;
   }
@@ -74,10 +83,37 @@
 }
 
 @media (min-height: 1000px) {
-  .container {
+  .card {
     /* margin: 10vh; */
     height: 70vh;
     margin-top: 15vh;
     margin-bottom: 15vh;
   }
+}
+
+.topContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  fill: wheat;
+  transition: transform 0.2s fill 0.2s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  fill: #d2b48c;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+}
+.active {
+  font-style: italic;
+  font-weight: bold;
 }

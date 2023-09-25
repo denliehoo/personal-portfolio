@@ -11,8 +11,10 @@
   - Does display: none also remove the element? Cause I might be having the code executed twice for Navbar when it is in lower screen px mode; Find a way to render content only when needed [ok]
   - When entering page for the first time, there is a pause before the left side navbar appears (for >680px) [ok]
   - Refactor components in src into a components folder[ok]
+  - Maybe change to continuous scrolling app [ok]
+  - Remove the white colour card and just make nav bar sticky. Also, can just do the scrolling on the normal scroll bar
   - Revamp about page
-  - Maybe change to continuous scrolling app
+  - Can refactor API to get experiences and project in 1 go
 
 - Non-dev related:
   - Place projects and experiences in DB

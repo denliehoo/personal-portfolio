@@ -1,19 +1,56 @@
 "use client";
-
 import Link from "next/link";
 import classes from "./Navbar.module.css";
-import { usePathname } from "next/navigation";
 import LogoRedirect from "../LogoRedirect/LogoRedirect";
 import TypingEffect from "./TypingEffect";
+import { useEffect, useState } from "react";
 
 const Navbar = (props: any) => {
-  const { isSmallScreen, closeMenu } = props;
+  const { isSmallScreen, closeMenu, rightDivRef, setActive } = props;
   const onClickLink = () => {
     if (isSmallScreen) {
       closeMenu();
     }
   };
-  const path = usePathname();
+
+  const [currentSection, setCurrentSection] = useState("about"); // Set an initial value
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "projects", "experiences"]; // List of section IDs
+
+      // Find the section that is closest to being in view
+      let closestSection = null;
+      let closestDistance = Infinity;
+
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          // Calculate the distance between the section's top and the top of the viewport
+          const distance = Math.abs(rect.top);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = section;
+          }
+        }
+      });
+
+      // Update the active link based on the closestSection
+      if (closestSection && closestSection !== currentSection) {
+        setCurrentSection(closestSection);
+        setActive(closestSection);
+      }
+    };
+
+    // Attach the scroll event listener
+    rightDivRef?.current?.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      rightDivRef?.current?.removeEventListener("scroll", handleScroll);
+    };
+  }, [currentSection]);
 
   return (
     <div className={classes.container}>
@@ -24,22 +61,43 @@ const Navbar = (props: any) => {
 
       <nav className={classes.navLinks}>
         <Link
-          href="/"
-          className={path === "/" ? classes.active : ""}
+          href="/#about"
+          className={
+            isSmallScreen
+              ? ""
+              : currentSection === "about"
+              ? classes.active
+              : ""
+          }
           onClick={onClickLink}
+          id="aboutLink"
         >
           About
         </Link>
         <Link
-          href="/projects"
-          className={path.startsWith("/projects") ? classes.active : ""}
+          id="projectsLink"
+          href="/#projects"
+          className={
+            isSmallScreen
+              ? ""
+              : currentSection === "projects"
+              ? classes.active
+              : ""
+          }
           onClick={onClickLink}
         >
           Projects
         </Link>
         <Link
-          href="/experiences"
-          className={path === "/experiences" ? classes.active : ""}
+          id="experiencesLink"
+          href="/#experiences"
+          className={
+            isSmallScreen
+              ? ""
+              : currentSection === "experiences"
+              ? classes.active
+              : ""
+          }
           onClick={onClickLink}
         >
           Experiences

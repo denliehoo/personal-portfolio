@@ -9,7 +9,7 @@ const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
   return (
     <div className={classes.container}>
       <div className={classes.top}>
-        <Link href="/projects" className={classes.back}>
+        <Link href="/#projects" className={classes.back}>
           &#8592; Back To Projects
         </Link>
 
