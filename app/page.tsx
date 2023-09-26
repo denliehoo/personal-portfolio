@@ -1,11 +1,11 @@
 import About from "@/src/components/About/About";
-import { getExperiences, getProjects } from "@/src/utils/clientApi";
+import { getAbout } from "@/src/utils/clientApi";
 
 const HomePage = async () => {
-  const projects: any = await getProjects();
-  const experiences = await getExperiences();
+  const about: any = await getAbout();
+  const { pinned, others, experiences } = about;
 
-  return <About projects={projects} experiences={experiences} />;
+  return <About pinned={pinned} experiences={experiences} others={others} />;
 };
 
 export default HomePage;

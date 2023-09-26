@@ -8,6 +8,7 @@ export interface IProject {
   medium: string;
   website: string;
   github: string;
+  isPinned: boolean;
 }
 
 export interface IExperience {

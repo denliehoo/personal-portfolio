@@ -30,3 +30,14 @@ export const getExperiences = async () => {
 
   return res.json();
 };
+
+export const getAbout = async () => {
+  const res = await fetch(process.env.URL + "/api/about", {
+    cache: "force-cache",
+  });
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+
+  return res.json();
+};

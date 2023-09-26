@@ -1,5 +1,5 @@
 .container {
-  padding: 10px 20px 0px 20px;
+  padding: 0px 20px 0px 20px;
   /* margin-top: 50px; */
   /* border: 1px solid red; */
   /* height: 95%; */
@@ -9,8 +9,41 @@
   /* justify-content: center; */
 }
 
+.about,
+.projects,
+.experiences {
+  border-bottom: 1px solid wheat;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  /* margin-bottom: 50px; */
+}
+.archives {
+  padding-bottom: 200px;
+}
+
+.view {
+  margin-top: 30px;
+}
+.view:hover {
+  color: #d2b48c;
+  cursor: pointer;
+}
+
+.technologies {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 @media (max-width: 680px) {
   .container {
     padding-top: 0px;
+  }
+  .view {
+    margin-top: 10px;
+  }
+  .archives {
+    padding-bottom: 50px;
+    margin-top: 10px;
   }
 }

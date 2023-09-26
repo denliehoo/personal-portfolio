@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 
 const TypingEffect: React.FC = () => {
   const phrases: string[] = [
-    "Full-Stack Developer               ",
-    "Blockchain Developer               ",
-    "Software Engineer               ",
+    "    Full-Stack Developer               ",
+    "    Blockchain Developer               ",
+    "    Software Engineer               ",
   ];
 
   const [text, setText] = useState<string>("");

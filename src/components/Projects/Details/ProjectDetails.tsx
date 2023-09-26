@@ -4,13 +4,24 @@ import LogoRedirect from "@/src/components/UI/LogoRedirect/LogoRedirect";
 import { IProject } from "@/src/types/index";
 
 const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
-  const { imgSrc, imgAlt, name, longDescription, medium, website, github } =
-    project;
+  const {
+    imgSrc,
+    imgAlt,
+    name,
+    longDescription,
+    medium,
+    website,
+    github,
+    isPinned,
+  } = project;
   return (
     <div className={classes.container}>
       <div className={classes.top}>
-        <Link href="/#projects" className={classes.back}>
-          &#8592; Back To Projects
+        <Link
+          href={isPinned ? "/#pinned" : "/#others"}
+          className={classes.back}
+        >
+          &#8592; Back To {isPinned ? "Pinned" : "Other"} Projects
         </Link>
 
         <div className={classes.name}>{name}</div>

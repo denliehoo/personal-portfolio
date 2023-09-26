@@ -12,9 +12,11 @@
   - When entering page for the first time, there is a pause before the left side navbar appears (for >680px) [ok]
   - Refactor components in src into a components folder[ok]
   - Maybe change to continuous scrolling app [ok]
-  - Remove the white colour card and just make nav bar sticky. Also, can just do the scrolling on the normal scroll bar
+  - Can refactor API to get experiences and project in 1 go [ok]
+  - Add an archives section. Maybe pinned projects is top 3 priority. Rest is in archives [ok]
+  - Furthmore, in the projects page itself, check if top left should be return to archives or return to project. Maybe, in the API, check if it is the top 3 highest priority (maybe do a sort?) and if it is not, add another property called "return" which will either be "archives" or "projects". Then change UI accordingly [ok]
+  - Add tags for projects (e.g. React, Solidity, etc...) which will be below the project?
   - Revamp about page
-  - Can refactor API to get experiences and project in 1 go
 
 - Non-dev related:
   - Place projects and experiences in DB

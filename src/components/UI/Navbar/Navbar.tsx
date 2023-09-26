@@ -17,7 +17,7 @@ const Navbar = (props: any) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "projects", "experiences"]; // List of section IDs
+      const sections = ["about", "pinned", "experiences", "others"]; // List of section IDs
 
       // Find the section that is closest to being in view
       let closestSection = null;
@@ -38,8 +38,15 @@ const Navbar = (props: any) => {
 
       // Update the active link based on the closestSection
       if (closestSection && closestSection !== currentSection) {
+        console.log(closestSection);
         setCurrentSection(closestSection);
-        setActive(closestSection);
+        setActive(
+          closestSection === "pinned"
+            ? "Pinned Projects"
+            : closestSection === "others"
+            ? "Other Projects"
+            : closestSection
+        );
       }
     };
 
@@ -75,18 +82,18 @@ const Navbar = (props: any) => {
           About
         </Link>
         <Link
-          id="projectsLink"
-          href="/#projects"
+          id="pinnedLink"
+          href="/#pinned"
           className={
             isSmallScreen
               ? ""
-              : currentSection === "projects"
+              : currentSection === "pinned"
               ? classes.active
               : ""
           }
           onClick={onClickLink}
         >
-          Projects
+          Pinned Projects
         </Link>
         <Link
           id="experiencesLink"
@@ -101,6 +108,21 @@ const Navbar = (props: any) => {
           onClick={onClickLink}
         >
           Experiences
+        </Link>
+
+        <Link
+          id="othersLink"
+          href="/#others"
+          className={
+            isSmallScreen
+              ? ""
+              : currentSection === "others"
+              ? classes.active
+              : ""
+          }
+          onClick={onClickLink}
+        >
+          Other Projects
         </Link>
       </nav>
 

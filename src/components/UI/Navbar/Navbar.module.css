@@ -13,7 +13,7 @@
 .navLinks {
   display: flex;
   flex-direction: column;
-  margin: 50% 0;
+  margin: 35% 0;
 }
 
 .navLinks a {
@@ -41,7 +41,7 @@
 
 @media (max-width: 680px) {
   .navLinks {
-    margin: 25% 0;
+    margin: 15% 0;
     align-items: center;
   }
   .container {
@@ -51,5 +51,11 @@
   }
   .active {
     margin-left: 0px;
+  }
+}
+
+@media (max-height: 500px) {
+  .navLinks {
+    margin: 30px;
   }
 }
