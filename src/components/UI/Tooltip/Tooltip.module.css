@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: wheat;
+  padding: 5px 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  white-space: nowrap;
+  z-index: 1;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0; /* Initially transparent */
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.tooltip.show {
+  visibility: visible; /* Show the tooltip */
+  opacity: 1; /* Fully opaque */
+}

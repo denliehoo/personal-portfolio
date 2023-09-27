@@ -2,8 +2,10 @@
 
 import classes from "./Project.module.css";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { IProject } from "../../types";
+import LogoRedirect from "../UI/LogoRedirect/LogoRedirect";
+import Tooltip from "../UI/Tooltip/Tooltip";
 
 const Project: React.FC<{ project: IProject }> = ({ project }) => {
   const {
@@ -20,7 +22,7 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
   } = project;
 
   return (
-    <Link className={classes.container} href={`/projects/${path}`}>
+    <div className={classes.container}>
       <Image
         src={imgSrc}
         alt={imgAlt}
@@ -32,9 +34,7 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
         className={classes.image}
       />
       <div className={classes.details}>
-        <div className={classes.name}>
-          {name} <span className={classes.rightArrow}>&rarr;</span>
-        </div>
+        <div className={classes.name}>{name}</div>
         <div className={classes.description}>{shortDescription}</div>
         <div className={classes.tags}>
           {tags.map((t) => (
@@ -43,8 +43,31 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
             </div>
           ))}
         </div>
+        <div className={classes.icons}>
+          {website && (
+            <Tooltip text="Website">
+              <LogoRedirect
+                width={30}
+                height={30}
+                url={website}
+                icon="website"
+              />
+            </Tooltip>
+          )}
+          {github && (
+            <Tooltip text="Code">
+              <LogoRedirect width={30} height={30} url={github} icon="github" />
+            </Tooltip>
+          )}
+
+          {medium && (
+            <Tooltip text="Learn More">
+              <LogoRedirect width={30} height={30} url={medium} icon="medium" />
+            </Tooltip>
+          )}
+        </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

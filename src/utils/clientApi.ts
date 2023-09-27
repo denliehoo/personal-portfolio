@@ -32,9 +32,14 @@ export const getExperiences = async () => {
 };
 
 export const getAbout = async () => {
-  const res = await fetch(process.env.URL + "/api/about", {
-    cache: "force-cache",
-  });
+  const res = await fetch(
+    process.env.URL + "/api/about",
+    // {
+    //   cache: "force-cache",
+    // }
+    // fetch new data once a day
+    { next: { revalidate: 86400 } }
+  );
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }

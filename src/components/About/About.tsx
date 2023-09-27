@@ -47,7 +47,7 @@ const About = (props: any) => {
         <p>
           I mainly use is React for the frontend, Node.js and MongoDB for the
           backend and Solidity for blockchain development. My professional
-          experience mainly revolves around the fintech, cryptocurrency and web3
+          experience mainly revolves around the Fintech, Cryptocurrency and Web3
           industry.
         </p>
         <p>

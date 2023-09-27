@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 
 const Navbar = (props: any) => {
   const pathname = usePathname();
-  pathname.startsWith("/project") ? console.log("yes") : console.log("no");
   const { isSmallScreen, closeMenu, rightDivRef, setActive } = props;
   const onClickLink = () => {
     if (isSmallScreen) {

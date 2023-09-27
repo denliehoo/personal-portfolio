@@ -17,6 +17,7 @@
   - Furthmore, in the projects page itself, check if top left should be return to archives or return to project. Maybe, in the API, check if it is the top 3 highest priority (maybe do a sort?) and if it is not, add another property called "return" which will either be "archives" or "projects". Then change UI accordingly [ok]
   - Add tags for projects (e.g. React, Solidity, etc...) which will be below the project? [ok]
   - Change breaking point to 700px to hamburger menu [ok]
+  - Remove individual project page and move links(e.g. github) into projects in main page [ok]
   - Revamp about page
 
 - Non-dev related:
