@@ -21,6 +21,7 @@ export const getMain = async (host: string) => {
       },
     }
   );
+  console.log(res);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");
