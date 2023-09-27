@@ -18,16 +18,14 @@
   - Add tags for projects (e.g. React, Solidity, etc...) which will be below the project? [ok]
   - Change breaking point to 700px to hamburger menu [ok]
   - Remove individual project page and move links(e.g. github) into projects in main page [ok]
+  - Add authentication for API and remove unnecessary code [ok]
   - Revamp about page
 
 - Non-dev related:
-  - Place projects and experiences in DB
-  - Host project images on some website and ensure it is in the DB
-  - Do a guideline on images that should be uploaded
-  - Do medium article for any important projects
-  - Update expense tracker python code
 
-## inspiraations:
+  - Do medium article for any important projects
+
+## Inspiraations:
 
 - https://dunks1980.com/
 - https://brittanychiang.com/#about
@@ -39,9 +37,10 @@ create a .env file in root with this:
 ```Javascript
 REACT_APP_DB_URL=mongodb+srv://USERNAMEHERE:PASSWORDHERE@DBNAME.mongodb.net/COLLECTIONNAME?retryWrites=true&w=majority
 URL=http://localhost:3000
+API_KEY=APIKEYHERE
 ```
 
-## Guidelines:
+## Image Guidelines:
 
 - Images should be 1440x700 px; If want to screenshot, ensure to set screensize (e.g. in chrome) to 1440x700px
 - If edit in Canva to add title: Fonts: Apricots, 170px, color: #F5DEB3

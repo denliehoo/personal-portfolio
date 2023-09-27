@@ -1,9 +1,19 @@
+// https://nextjs.org/docs/app/building-your-application/routing/route-handlers
+
 import { connectToDatabase } from "@/src/utils";
 import { NextResponse } from "next/server";
+import { headers } from "next/headers";
 
-// /api/experiences
+// /api/main
 
 export async function GET() {
+  const headersList = headers();
+  const auth = headersList.get("Authorization");
+  if (auth !== process.env.API_KEY)
+    return new Response("You are not authorized", {
+      status: 401,
+    });
+
   const { client, db } = await connectToDatabase();
   const experiences = await db.collection("experiences").find().toArray();
   let allProjects = await db
@@ -24,6 +34,6 @@ export async function GET() {
 
   const [pinned, others] = splitArray(allProjects, 3);
   client.close();
-  console.log("fetching about");
+  console.log("fetching main");
   return NextResponse.json({ experiences, pinned, others });
 }
