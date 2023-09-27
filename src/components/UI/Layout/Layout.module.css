@@ -15,24 +15,16 @@
   width: min(95vw, 1600px);
 }
 
-/* @media (min-width: 1600px) {
-  .card {
-    max-width: 1600px !important;
-  }
-} */
-
 .left {
   margin-top: 10px;
   padding-left: 100px;
 }
 
 .right {
-  /* border: 1px solid red; */
   padding-right: 50px;
   flex: 1;
   margin-left: 200px;
   margin-top: 30px;
-  /* margin-top: 3%; */
   height: 85%;
   overflow-y: auto;
   overflow-x: hidden; /* Hide horizontal scrollbar */
@@ -44,7 +36,6 @@
   border-bottom: 3px solid wheat;
 }
 
-/* Media query for screens less than 1200px wide */
 @media (max-width: 1200px) {
   .right {
     margin-left: 50px;
@@ -54,8 +45,7 @@
   }
 }
 
-/* Media query for screens less than 800px wide */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .right {
     padding-right: 10px;
     margin-left: 10px;
@@ -90,14 +80,6 @@
     padding-right: 10px;
   }
 }
-
-/* @media (min-height: 1000px) {
-  .card {
-    height: 70vh;
-    margin-top: 15vh;
-    margin-bottom: 15vh;
-  }
-} */
 
 .topContainer {
   display: flex;

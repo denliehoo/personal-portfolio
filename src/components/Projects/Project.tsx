@@ -2,7 +2,6 @@
 
 import classes from "./Project.module.css";
 import Image from "next/image";
-// import Link from "next/link";
 import { IProject } from "../../types";
 import LogoRedirect from "../UI/LogoRedirect/LogoRedirect";
 import Tooltip from "../UI/Tooltip/Tooltip";
@@ -26,10 +25,8 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
       <Image
         src={imgSrc}
         alt={imgAlt}
-        // width={100}
-        // height={48.61}
-        width={125}
-        height={60.76}
+        width={500}
+        height={243.04}
         priority
         className={classes.image}
       />
