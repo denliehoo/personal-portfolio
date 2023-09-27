@@ -4,8 +4,11 @@ import classes from "./Navbar.module.css";
 import LogoRedirect from "../LogoRedirect/LogoRedirect";
 import TypingEffect from "./TypingEffect";
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = (props: any) => {
+  const pathname = usePathname();
+  pathname.startsWith("/project") ? console.log("yes") : console.log("no");
   const { isSmallScreen, closeMenu, rightDivRef, setActive } = props;
   const onClickLink = () => {
     if (isSmallScreen) {
@@ -14,6 +17,13 @@ const Navbar = (props: any) => {
   };
 
   const [currentSection, setCurrentSection] = useState("about"); // Set an initial value
+
+  const getLinkClassName = (section: string) => {
+    if (isSmallScreen) return "";
+    if (pathname.startsWith("/project")) return "";
+    if (currentSection === section) return classes.active;
+    return "";
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -69,13 +79,7 @@ const Navbar = (props: any) => {
       <nav className={classes.navLinks}>
         <Link
           href="/#about"
-          className={
-            isSmallScreen
-              ? ""
-              : currentSection === "about"
-              ? classes.active
-              : ""
-          }
+          className={getLinkClassName("about")}
           onClick={onClickLink}
           id="aboutLink"
         >
@@ -84,13 +88,7 @@ const Navbar = (props: any) => {
         <Link
           id="pinnedLink"
           href="/#pinned"
-          className={
-            isSmallScreen
-              ? ""
-              : currentSection === "pinned"
-              ? classes.active
-              : ""
-          }
+          className={getLinkClassName("pinned")}
           onClick={onClickLink}
         >
           Pinned Projects
@@ -98,13 +96,7 @@ const Navbar = (props: any) => {
         <Link
           id="experiencesLink"
           href="/#experiences"
-          className={
-            isSmallScreen
-              ? ""
-              : currentSection === "experiences"
-              ? classes.active
-              : ""
-          }
+          className={getLinkClassName("experiences")}
           onClick={onClickLink}
         >
           Experiences
@@ -113,13 +105,7 @@ const Navbar = (props: any) => {
         <Link
           id="othersLink"
           href="/#others"
-          className={
-            isSmallScreen
-              ? ""
-              : currentSection === "others"
-              ? classes.active
-              : ""
-          }
+          className={getLinkClassName("others")}
           onClick={onClickLink}
         >
           Other Projects
