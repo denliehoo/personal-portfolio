@@ -15,7 +15,8 @@
   - Can refactor API to get experiences and project in 1 go [ok]
   - Add an archives section. Maybe pinned projects is top 3 priority. Rest is in archives [ok]
   - Furthmore, in the projects page itself, check if top left should be return to archives or return to project. Maybe, in the API, check if it is the top 3 highest priority (maybe do a sort?) and if it is not, add another property called "return" which will either be "archives" or "projects". Then change UI accordingly [ok]
-  - Add tags for projects (e.g. React, Solidity, etc...) which will be below the project?
+  - Add tags for projects (e.g. React, Solidity, etc...) which will be below the project? [ok]
+  - Change breaking point to 700px to hamburger menu [ok]
   - Revamp about page
 
 - Non-dev related:
@@ -23,6 +24,7 @@
   - Host project images on some website and ensure it is in the DB
   - Do a guideline on images that should be uploaded
   - Do medium article for any important projects
+  - Update expense tracker python code
 
 ## inspiraations:
 
@@ -37,6 +39,11 @@ create a .env file in root with this:
 REACT_APP_DB_URL=mongodb+srv://USERNAMEHERE:PASSWORDHERE@DBNAME.mongodb.net/COLLECTIONNAME?retryWrites=true&w=majority
 URL=http://localhost:3000
 ```
+
+## Guidelines:
+
+- Images should be 1440x700 px; If want to screenshot, ensure to set screensize (e.g. in chrome) to 1440x700px
+- If edit in Canva to add title: Fonts: Apricots, 170px, color: #F5DEB3
 
 ## Getting Started
 

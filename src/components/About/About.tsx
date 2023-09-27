@@ -53,9 +53,8 @@ const About = (props: any) => {
         <p>
           In 2017, before I began my studies at Nanyang Business School, Nanyang
           Technological University, I had my first exposure to programming.
-          Initially, my focus was on pursuing a career in finance, so I decided
-          to start with Microsoft Excel VBA, considering it a valuable asset in
-          the finance field.
+          Initially, my focus was on pursuing a career in finance and decided to
+          learn Microsoft Excel VBA, considering it a valuable skill in finance.
         </p>
         <p>
           As I progressed through my academic journey, my perspective began to

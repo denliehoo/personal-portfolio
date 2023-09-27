@@ -2,6 +2,7 @@ import Link from "next/link";
 import classes from "./ProjectDetails.module.css";
 import LogoRedirect from "@/src/components/UI/LogoRedirect/LogoRedirect";
 import { IProject } from "@/src/types/index";
+import Image from "next/image";
 
 const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
   const {
@@ -26,8 +27,14 @@ const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
 
         <div className={classes.name}>{name}</div>
       </div>
-
-      <img src={imgSrc} className={classes.image} alt={imgAlt} />
+      <Image
+        src={imgSrc}
+        alt={imgAlt}
+        width={0}
+        height={0}
+        sizes="100vw"
+        style={{ width: "100%", height: "auto" }}
+      />
       <div className={classes.icons}>
         {website && (
           <LogoRedirect width={30} height={30} url={website} icon="website" />

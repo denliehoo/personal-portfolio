@@ -9,6 +9,7 @@ export interface IProject {
   website: string;
   github: string;
   isPinned: boolean;
+  tags: string[];
 }
 
 export interface IExperience {

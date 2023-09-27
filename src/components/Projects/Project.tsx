@@ -16,6 +16,7 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
     github,
     path,
     shortDescription,
+    tags,
   } = project;
 
   return (
@@ -23,8 +24,10 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
       <Image
         src={imgSrc}
         alt={imgAlt}
-        width={100}
-        height={56.25}
+        // width={100}
+        // height={48.61}
+        width={125}
+        height={60.76}
         priority
         className={classes.image}
       />
@@ -33,6 +36,13 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
           {name} <span className={classes.rightArrow}>&rarr;</span>
         </div>
         <div className={classes.description}>{shortDescription}</div>
+        <div className={classes.tags}>
+          {tags.map((t) => (
+            <div className={classes.tag} key={`${name}-${t}`}>
+              {t}
+            </div>
+          ))}
+        </div>
       </div>
     </Link>
   );

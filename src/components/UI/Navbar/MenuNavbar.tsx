@@ -13,7 +13,7 @@ const MenuNavbar = (props: any) => {
   }, [clickMenuCount]);
 
   useEffect(() => {
-    menu && width > 680 && setMenu(false);
+    menu && width > 700 && setMenu(false);
   }, [width]);
 
   return (
