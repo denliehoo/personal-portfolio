@@ -1,6 +1,15 @@
-export const getMain = async () => {
+export const getMain = async (host: string) => {
+  // potential temporary fix till nextjs addresses this issue
+  console.log(host);
+  const baseUrl =
+    host === "localhost:3000"
+      ? `http://localhost:3000`
+      : `https://${host}/api/main`;
+  console.log("baseUrl is", baseUrl);
+  // const res = await fetch(
+  //   process.env.URL + "/api/main",
   const res = await fetch(
-    process.env.URL + "/api/main",
+    `${baseUrl}/api/main`,
     // {
     //   cache: "force-cache",
     // }
