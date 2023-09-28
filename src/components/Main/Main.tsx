@@ -2,11 +2,12 @@
 import classes from "./Main.module.css";
 import Project from "../Projects/Project";
 import Experience from "../Experiences/Experience";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import About from "../About/About";
 
 const Main = (props: any) => {
   const { pinned, others, experiences } = props;
+  const [viewOthers, setViewOthers] = useState(false);
 
   const scrollOptions: ScrollIntoViewOptions = {
     behavior: "smooth",
@@ -25,17 +26,17 @@ const Main = (props: any) => {
     document.getElementById("aboutLink")?.addEventListener("click", () => {
       handleNavClick("about");
     });
-    document.getElementById("pinnedLink")?.addEventListener("click", () => {
-      handleNavClick("pinned");
+    document.getElementById("projectsLink")?.addEventListener("click", () => {
+      handleNavClick("projects");
     });
     document
       .getElementById("experiencesLink")
       ?.addEventListener("click", () => {
         handleNavClick("experiences");
       });
-    document.getElementById("othersLink")?.addEventListener("click", () => {
-      handleNavClick("others");
-    });
+    // document.getElementById("othersLink")?.addEventListener("click", () => {
+    //   handleNavClick("others");
+    // });
     // Add more event listeners for other links
   }, []);
   return (
@@ -43,16 +44,35 @@ const Main = (props: any) => {
       <section id="about" className={classes.about}>
         <About />
       </section>
-      <section id="pinned" className={classes.projects}>
+      <section id="projects" className={classes.projects}>
         {pinned.map((p: any) => (
           <Project
             key={p._id.toString()}
             project={{ ...p, _id: p._id.toString() }}
           />
         ))}
-        <div className={classes.view} onClick={() => handleNavClick("others")}>
-          View other projects &rarr;
+        <div
+          style={{
+            display: viewOthers ? "inline" : "none",
+          }}
+        >
+          {others.map((p: any) => (
+            <Project
+              key={p._id.toString()}
+              project={{ ...p, _id: p._id.toString() }}
+            />
+          ))}
         </div>
+        <button
+          className={classes.view}
+          onClick={() => setViewOthers(!viewOthers)}
+        >
+          {viewOthers ? (
+            <>&larr; Hide other projects</>
+          ) : (
+            <>View other projects &rarr;</>
+          )}
+        </button>
       </section>
       <section id="experiences" className={classes.experiences}>
         {experiences.map((e: any) => (
@@ -74,14 +94,14 @@ const Main = (props: any) => {
         {/* <div className={classes.view}> View full resume &rarr;</div> */}
       </section>
 
-      <section id="others" className={classes.archives}>
+      {/* <section id="others" className={classes.archives}>
         {others.map((p: any) => (
           <Project
             key={p._id.toString()}
             project={{ ...p, _id: p._id.toString() }}
           />
         ))}
-      </section>
+      </section> */}
     </div>
   );
 };

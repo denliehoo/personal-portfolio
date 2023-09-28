@@ -2,7 +2,8 @@
   scroll-behavior: smooth !important;
 }
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* font-family: Calibri; */
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: wheat;
   margin: 0;
@@ -10,7 +11,7 @@ body {
   top: 0;
   bottom: 0;
 
-  background-size: 300% 300%;
+  background-size: 900% 900%;
   background-image: linear-gradient(
     -45deg,
     #000000 0%,
@@ -51,8 +52,10 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(245, 222, 179, 0.2);
-  border-radius: 20px;
+  /* background: rgba(245, 222, 179, 0.2); */
+  /* background: transparent; */
+  background: #000000;
+  /* border-radius: 20px; */
 }
 
 ::-webkit-scrollbar-thumb {

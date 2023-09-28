@@ -3,15 +3,12 @@ import { useWindowSize } from "@/src/hooks/useWindowSize";
 import MenuNavbar from "../Navbar/MenuNavbar";
 import Navbar from "../Navbar/Navbar";
 import classes from "./Layout.module.css";
-import { useEffect, useRef, useState } from "react";
-import Backdrop from "../Modal/Backdrop";
-import Loader from "../Loader/Loader";
+import { useEffect, useState } from "react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   const { width } = useWindowSize();
   const [backdrop, setBackDrop] = useState(true);
   const [renderCount, setRenderCount] = useState(0);
-  const rightDivRef = useRef<HTMLDivElement | null>(null);
   const [active, setActive] = useState("about");
   const [clickMenuCount, setClickMenuCount] = useState(0);
 
@@ -35,14 +32,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={classes.container}>
       <div className={classes.card}>
-        {/* {backdrop && (
-          <Backdrop isOpen={backdrop} onClose={() => {}}>
-            <Loader />
-          </Backdrop>
-        )} */}
-
         <div className={classes.left}>
-          <Navbar rightDivRef={rightDivRef} setActive={setActive} />
+          <Navbar setActive={setActive} />
         </div>
         <div className={classes.top}>
           <div className={classes.topContainer}>
@@ -72,9 +63,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           />
         </div>
 
-        <div className={classes.right} ref={rightDivRef}>
-          {children}
-        </div>
+        <div className={classes.right}>{children}</div>
       </div>
     </div>
   );

@@ -8,27 +8,27 @@ const About = () => {
         web development and blockchain development.
       </p>
       <p>
-        I mainly use is React for the frontend, Node.js and MongoDB for the
-        backend and Solidity for blockchain development. My professional
-        experience mainly revolves around the Fintech, Cryptocurrency and Web3
-        industry.
+        I mainly use React for the frontend, Node.js and MongoDB for the backend
+        and Solidity for blockchain development. My professional experience
+        revolves around the Fintech, Cryptocurrency and Web3 industry.
       </p>
       <p>
-        In 2017, before I began my studies at Nanyang Business School, Nanyang
-        Technological University, I had my first exposure to programming.
-        Initially, my focus was on pursuing a career in finance and decided to
-        learn Microsoft Excel VBA, considering it a valuable skill in finance.
+        Before I began my studies at Nanyang Business School, Nanyang
+        Technological University, in 2017, I had my first exposure to
+        programming. Initially, my focus was on pursuing a career in finance. I
+        decided to learn Microsoft Excel VBA, considering it a valuable skill in
+        finance.
       </p>
       <p>
-        As I progressed through my academic journey, my perspective began to
-        shift. During my last semester in 2021, I had a realization that my true
-        passion lay in programming, not finance.
+        As I progressed through my academic journey, my perspective shifted.
+        During my last year, I had a realization that my true passion lay in
+        programming, not finance.
       </p>
       <p>
         I took a semester off from university to immerse myself in programming.
         During this time, I secured an internship at a fintech company as a
-        support role, but later transitioned into a programming position within
-        the same company.
+        support role, and was given the opportunity to transition into a
+        programming role after graduation.
       </p>
       <p>
         Upon completing my degree at the end of 2021, I officially embraced the

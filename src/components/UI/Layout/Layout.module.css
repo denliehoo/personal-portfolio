@@ -1,83 +1,77 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .card {
   display: flex;
-  justify-content: center;
-  margin: 5vh;
-  height: 90vh;
-  overflow: hidden;
-  border: 3px solid wheat;
-  border-radius: 10px;
-  width: min(95vw, 1600px);
+  justify-content: space-between;
+  position: relative;
+
+  /* the left and right spacing */
+  padding: 0 5%;
 }
 
 .left {
-  margin-top: 10px;
-  padding-left: 100px;
+  padding-left: 20px;
+  flex: 0 0 auto; /* Prevent left div from growing */
+  width: 300px; /* Set a fixed width for the left div */
+
+  position: sticky;
+  top: 0; /* Stick to the top of the parent container */
+  height: 100%; /* Make sure it takes the full height of the container */
+  padding-top: 20px;
 }
 
 .right {
-  padding-right: 50px;
-  flex: 1;
-  margin-left: 200px;
-  margin-top: 30px;
-  height: 85%;
-  overflow-y: auto;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  padding: 10px;
+
+  flex: 1; /* Allow right div to grow and take available space */
 }
 .top {
   display: none;
-  padding: 10px;
-
-  border-bottom: 3px solid wheat;
 }
 
-@media (max-width: 1200px) {
-  .right {
-    margin-left: 50px;
+@media (min-width: 1100px) {
+  .card {
+    width: 1100px;
+    justify-content: center;
   }
-  .left {
-    padding-left: 50px;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 }
 
 @media (max-width: 1000px) {
-  .right {
-    padding-right: 10px;
-    margin-left: 10px;
-  }
   .left {
-    padding-left: 20px;
+    width: 250px;
+  }
+  .card {
+    padding: 0 1%;
   }
 }
 
 /* breaking point to hamburger menu */
 @media (max-width: 700px) {
   .card {
+    display: flex;
     flex-direction: column;
+
+    padding: 0 0;
   }
   .top {
     display: inline;
+    /*  for top */
+    z-index: 1000;
+    flex: 0 0 auto; /* Prevent top div from growing */
+    position: sticky;
+    top: 0; /* Stick to the top of the parent container */
+
+    padding: 10px;
+    border-bottom: 1px solid wheat;
+
+    background-color: #000000;
   }
   .left {
     display: none;
-  }
-  .right {
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 420px) {
-  .card {
-    margin: 2vh;
-    height: 96vh;
-  }
-  .right {
-    padding-right: 10px;
   }
 }
 

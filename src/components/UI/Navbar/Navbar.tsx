@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 const Navbar = (props: any) => {
   const pathname = usePathname();
-  const { isSmallScreen, closeMenu, rightDivRef, setActive } = props;
+  const { isSmallScreen, closeMenu, setActive } = props;
   const onClickLink = () => {
     if (isSmallScreen) {
       closeMenu();
@@ -26,7 +26,7 @@ const Navbar = (props: any) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["about", "pinned", "experiences", "others"]; // List of section IDs
+      const sections = ["about", "projects", "experiences"]; // List of section IDs
 
       // Find the section that is closest to being in view
       let closestSection = null;
@@ -47,24 +47,18 @@ const Navbar = (props: any) => {
 
       // Update the active link based on the closestSection
       if (closestSection && closestSection !== currentSection) {
-        console.log(closestSection);
+        // console.log(closestSection);
         setCurrentSection(closestSection);
-        setActive(
-          closestSection === "pinned"
-            ? "Pinned Projects"
-            : closestSection === "others"
-            ? "Other Projects"
-            : closestSection
-        );
+        // console.log(setActive);
+        setActive && setActive(closestSection);
       }
     };
 
-    // Attach the scroll event listener
-    rightDivRef?.current?.addEventListener("scroll", handleScroll);
+    document.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      rightDivRef?.current?.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("scroll", handleScroll);
     };
   }, [currentSection]);
 
@@ -85,12 +79,12 @@ const Navbar = (props: any) => {
           About
         </Link>
         <Link
-          id="pinnedLink"
-          href="/#pinned"
-          className={getLinkClassName("pinned")}
+          id="projectsLink"
+          href="/#projects"
+          className={getLinkClassName("projects")}
           onClick={onClickLink}
         >
-          Pinned Projects
+          Projects
         </Link>
         <Link
           id="experiencesLink"
@@ -100,7 +94,7 @@ const Navbar = (props: any) => {
         >
           Experiences
         </Link>
-
+        {/* 
         <Link
           id="othersLink"
           href="/#others"
@@ -108,7 +102,7 @@ const Navbar = (props: any) => {
           onClick={onClickLink}
         >
           Other Projects
-        </Link>
+        </Link> */}
       </nav>
 
       <div className={classes.icons}>

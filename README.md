@@ -19,6 +19,9 @@
   - Change breaking point to 700px to hamburger menu [ok]
   - Remove individual project page and move links(e.g. github) into projects in main page [ok]
   - Add authentication for API and remove unnecessary code [ok]
+  - 3 items - about projects experiences [ok]
+  - Projects: display 3 by default. Below it put "View all projects" upon clikcing, show the other projects below it. Hence, hide it as a css class only. But, ensure still in page source. [ok]
+  - Remove white borders; use the scrolling as the default scroller and not in the container. Nav bar should stick to left. When in menu mode, top sticks to top. [ok]
   - Revamp about page
 
 - Non-dev related:
