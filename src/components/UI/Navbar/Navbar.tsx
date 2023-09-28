@@ -18,7 +18,6 @@ const Navbar = (props: any) => {
   const [currentSection, setCurrentSection] = useState("about"); // Set an initial value
 
   const getLinkClassName = (section: string) => {
-    if (isSmallScreen) return "";
     if (pathname.startsWith("/project")) return "";
     if (currentSection === section) return classes.active;
     return "";

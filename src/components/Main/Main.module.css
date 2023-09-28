@@ -1,12 +1,5 @@
 .container {
   padding: 0px 20px 0px 20px;
-  /* margin-top: 50px; */
-  /* border: 1px solid red; */
-  /* height: 95%; */
-  /* background-color: black; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
 }
 
 .about,
@@ -15,10 +8,7 @@
   border-bottom: 1px solid wheat;
   margin-bottom: 30px;
   padding-bottom: 30px;
-  /* margin-bottom: 50px; */
-}
-.archives {
-  padding-bottom: 200px;
+  scroll-margin-top: 3px;
 }
 
 .view {
@@ -33,12 +23,6 @@
   cursor: pointer;
 }
 
-.technologies {
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: bold;
-}
-
 @media (max-width: 700px) {
   .container {
     padding-top: 0px;
@@ -49,5 +33,16 @@
   .archives {
     padding-bottom: 50px;
     margin-top: 10px;
+  }
+
+  .about,
+  .projects,
+  .experiences {
+    /* because of the sticky top bar, when we scroll to the section through the nav link ,
+    the section will be blocked because it scrolls to exactly where the seciton start.
+    Thus, we offset the scrolling to 70px below what it originally should have been at. 
+    Note: the sticky navbar is 67px in height. Thus, it makes it look like it is scrolling to the correct section
+    */
+    scroll-margin-top: 70px;
   }
 }

@@ -34,9 +34,6 @@ const Main = (props: any) => {
       ?.addEventListener("click", () => {
         handleNavClick("experiences");
       });
-    // document.getElementById("othersLink")?.addEventListener("click", () => {
-    //   handleNavClick("others");
-    // });
     // Add more event listeners for other links
   }, []);
   return (
