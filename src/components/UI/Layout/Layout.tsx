@@ -57,7 +57,6 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           </div>
           <MenuNavbar
             isJustOpened={backdrop}
-            active={active}
             clickMenuCount={clickMenuCount}
             width={width}
           />

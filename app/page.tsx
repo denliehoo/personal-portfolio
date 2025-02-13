@@ -5,7 +5,7 @@ import { headers } from "next/headers";
 const HomePage = async () => {
   const host = headers().get("host");
 
-  const main: any = await getMain(host || "");
+  const main = await getMain(host || "");
   const { pinned, others, experiences } = main;
 
   return <Main pinned={pinned} experiences={experiences} others={others} />;

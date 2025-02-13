@@ -3,14 +3,21 @@ import Link from "next/link";
 import classes from "./Navbar.module.css";
 import LogoRedirect from "../LogoRedirect/LogoRedirect";
 import TypingEffect from "./TypingEffect";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { EInteractableIcons } from "@/src/enum";
 
-const Navbar = (props: any) => {
+interface INavbar {
+  isSmallScreen?: boolean;
+  closeMenu?: () => void;
+  setActive?: (section: string) => void;
+}
+
+const Navbar: FC<INavbar> = ({ isSmallScreen, closeMenu, setActive }) => {
   const pathname = usePathname();
-  const { isSmallScreen, closeMenu, setActive } = props;
+
   const onClickLink = () => {
-    if (isSmallScreen) {
+    if (isSmallScreen && closeMenu) {
       closeMenu();
     }
   };
@@ -28,7 +35,7 @@ const Navbar = (props: any) => {
       const sections = ["about", "projects", "experiences"]; // List of section IDs
 
       // Find the section that is closest to being in view
-      let closestSection = null;
+      let closestSection: null | string = null;
       let closestDistance = Infinity;
 
       sections.forEach((section) => {
@@ -46,9 +53,7 @@ const Navbar = (props: any) => {
 
       // Update the active link based on the closestSection
       if (closestSection && closestSection !== currentSection) {
-        // console.log(closestSection);
         setCurrentSection(closestSection);
-        // console.log(setActive);
         setActive && setActive(closestSection);
       }
     };
@@ -109,13 +114,13 @@ const Navbar = (props: any) => {
           width={50}
           height={50}
           url="https://github.com/denliehoo"
-          icon="github"
+          icon={EInteractableIcons.GITHUB}
         />
         <LogoRedirect
           width={50}
           height={50}
           url="https://www.linkedin.com/in/denlie-hoo/"
-          icon="linkedIn"
+          icon={EInteractableIcons.LINKEDIN}
         />
       </div>
     </div>

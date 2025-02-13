@@ -3,23 +3,19 @@
 import classes from "./Project.module.css";
 import Image from "next/image";
 import { IProject } from "../../types";
-import LogoRedirect from "../UI/LogoRedirect/LogoRedirect";
-import Tooltip from "../UI/Tooltip/Tooltip";
+import { FC } from "react";
+import ProjectIcons from "./Icons";
 
-const Project: React.FC<{ project: IProject }> = ({ project }) => {
-  const {
-    imgSrc,
-    imgAlt,
-    name,
-    longDescription,
-    medium,
-    website,
-    github,
-    path,
-    shortDescription,
-    tags,
-  } = project;
-
+const Project: FC<IProject> = ({
+  imgSrc,
+  imgAlt,
+  name,
+  medium,
+  website,
+  github,
+  shortDescription,
+  tags,
+}) => {
   return (
     <div className={classes.container}>
       <Image
@@ -40,29 +36,7 @@ const Project: React.FC<{ project: IProject }> = ({ project }) => {
             </div>
           ))}
         </div>
-        <div className={classes.icons}>
-          {website && (
-            <Tooltip text="Website">
-              <LogoRedirect
-                width={30}
-                height={30}
-                url={website}
-                icon="website"
-              />
-            </Tooltip>
-          )}
-          {github && (
-            <Tooltip text="Code">
-              <LogoRedirect width={30} height={30} url={github} icon="github" />
-            </Tooltip>
-          )}
-
-          {medium && (
-            <Tooltip text="Learn More">
-              <LogoRedirect width={30} height={30} url={medium} icon="medium" />
-            </Tooltip>
-          )}
-        </div>
+        <ProjectIcons github={github} medium={medium} website={website} />
       </div>
     </div>
   );

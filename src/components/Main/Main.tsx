@@ -2,11 +2,11 @@
 import classes from "./Main.module.css";
 import Project from "../Projects/Project";
 import Experience from "../Experiences/Experience";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, FC } from "react";
 import About from "../About/About";
+import { IExperience, IMainProps, IProject } from "@/src/types";
 
-const Main = (props: any) => {
-  const { pinned, others, experiences } = props;
+const Main: FC<IMainProps> = ({ pinned, others, experiences }) => {
   const [viewOthers, setViewOthers] = useState(false);
 
   const scrollOptions: ScrollIntoViewOptions = {
@@ -42,22 +42,16 @@ const Main = (props: any) => {
         <About />
       </section>
       <section id="projects" className={classes.projects}>
-        {pinned.map((p: any) => (
-          <Project
-            key={p._id.toString()}
-            project={{ ...p, _id: p._id.toString() }}
-          />
+        {pinned.map((p: IProject) => (
+          <Project key={p._id.toString()} {...p} />
         ))}
         <div
           style={{
             display: viewOthers ? "inline" : "none",
           }}
         >
-          {others.map((p: any) => (
-            <Project
-              key={p._id.toString()}
-              project={{ ...p, _id: p._id.toString() }}
-            />
+          {others.map((p: IProject) => (
+            <Project key={p._id.toString()} {...p} />
           ))}
         </div>
         <button
@@ -72,7 +66,9 @@ const Main = (props: any) => {
         </button>
       </section>
       <section id="experiences" className={classes.experiences}>
-        {experiences.map((e: any) => (
+        {/* For testing of experience */}
+        {/* <Experience key={"asdasdasd"} experience={{ ...exp }} /> */}
+        {experiences.map((e: IExperience) => (
           <Experience
             key={e._id.toString()}
             experience={{ ...e, _id: e._id.toString() }}
@@ -104,3 +100,17 @@ const Main = (props: any) => {
 };
 
 export default Main;
+
+// const exp = {
+//   _id: "123",
+//   date: "NOV 2023 - PRESENT",
+//   title: "Software Engineer",
+//   company: "Aquariux Fintech",
+//   pointers: [
+//     "Built a payments gateway and cross-platform trading platform using TypeScript, React and React Native, ensuring seamless experiences across Android, iOS, and web",
+//     "Used a micro-frontend and monorepo architecture, and refactored shared components into a GitLab Private Registry",
+//     "Integrated multiple third-party services, including TradingView with a custom WebSocket data feed for real-time market data and advanced charting, Sumsub for Compliance, and Mixpanel for data analytics",
+//     "Configured CI/CD pipelines with Jenkins, deployed to AWS S3, and set up CloudFront functions",
+//   ],
+// };
+// 650977a1c8c3b14e09cfeeeb

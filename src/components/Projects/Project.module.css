@@ -51,14 +51,6 @@
   font-size: 11px;
 }
 
-.icons {
-  display: flex;
-  margin-top: 5px;
-  gap: 10px;
-  margin-left: 5px;
-  cursor: pointer !important;
-}
-
 @media (max-width: 900px) {
   .image {
     width: 187.5px;

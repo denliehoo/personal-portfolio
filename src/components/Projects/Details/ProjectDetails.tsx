@@ -3,8 +3,12 @@ import classes from "./ProjectDetails.module.css";
 import LogoRedirect from "@/src/components/UI/LogoRedirect/LogoRedirect";
 import { IProject } from "@/src/types/index";
 import Image from "next/image";
+import { EInteractableIcons } from "@/src/enum";
+import { FC } from "react";
 
-const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
+// Currenty not used
+
+const ProjectDetails: FC<{ project: IProject }> = ({ project }) => {
   const {
     imgSrc,
     imgAlt,
@@ -37,17 +41,32 @@ const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
       />
       <div className={classes.icons}>
         {website && (
-          <LogoRedirect width={30} height={30} url={website} icon="website" />
+          <LogoRedirect
+            width={30}
+            height={30}
+            url={website}
+            icon={EInteractableIcons.WEBSITE}
+          />
         )}
         {github && (
-          <LogoRedirect width={30} height={30} url={github} icon="github" />
+          <LogoRedirect
+            width={30}
+            height={30}
+            url={github}
+            icon={EInteractableIcons.GITHUB}
+          />
         )}
 
         {medium && (
-          <LogoRedirect width={30} height={30} url={medium} icon="medium" />
+          <LogoRedirect
+            width={30}
+            height={30}
+            url={medium}
+            icon={EInteractableIcons.MEDIUM}
+          />
         )}
       </div>
-      {longDescription.map((paragraph, i) => (
+      {longDescription?.map((paragraph, i) => (
         <p key={i}>{paragraph}</p>
       ))}
     </div>
@@ -55,19 +74,3 @@ const ProjectDetails: React.FC<{ project: IProject }> = ({ project }) => {
 };
 
 export default ProjectDetails;
-
-// const imgSrc = "/multiswap.png";
-// const imgAlt = "multiswap";
-// const name = "Project Name";
-// const longDescription = [
-//   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic iusto fugiat voluptatem obcaecati libero praesentium autem rem nihil optio ullam consequuntur nam vel reiciendis suscipit.",
-//   "Doloremque, repellat, architecto eos sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic iusto fugiat voluptatem obcaecati libero praesentium autem rem nihil optio ullam consequuntur nam vel reiciendis suscipit doloremque, repellat, architecto eos sit.",
-//   "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic iusto fugiat voluptatem obcaecati libero praesentium autem rem nihil optio ullam consequuntur nam vel reiciendis.",
-//   "Suscipit doloremque, repellat, architecto eos sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic iusto fugiat voluptatem obcaecati libero praesentium autem rem nihil optio ullam consequuntur nam vel reiciendis suscipit doloremque, repellat, architecto.",
-//   "Eos sit. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic iusto fugiat voluptatem.",
-//   "Obcaecati libero praesentium autem rem nihil optio ullam consequuntur nam vel reiciendis suscipit doloremque, repellat, architecto eos sit.",
-// ];
-// const medium =
-//   "https://medium.com/@denliehoo/developing-multiswap-a-decentralized-application-for-swapping-to-and-fro-multiple-coins-tokens-20b10d45f1b";
-// const website = "https://multiswap-b2243.web.app/";
-// const github = "https://github.com/denliehoo/multi-swap";

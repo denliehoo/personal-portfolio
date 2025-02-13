@@ -1,11 +1,20 @@
 "use client";
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 
 import Navbar from "./Navbar";
 import Backdrop from "../Modal/Backdrop";
 
-const MenuNavbar = (props: any) => {
-  const { isJustOpened, width, clickMenuCount } = props;
+interface IMenuNavBar {
+  isJustOpened: boolean;
+  width: number | undefined;
+  clickMenuCount: number;
+}
+
+const MenuNavbar: FC<IMenuNavBar> = ({
+  isJustOpened,
+  width,
+  clickMenuCount,
+}) => {
   const [menu, setMenu] = useState(isJustOpened);
 
   useEffect(() => {
@@ -13,7 +22,7 @@ const MenuNavbar = (props: any) => {
   }, [clickMenuCount]);
 
   useEffect(() => {
-    menu && width > 700 && setMenu(false);
+    menu && width && width > 700 && setMenu(false);
   }, [width]);
 
   return (

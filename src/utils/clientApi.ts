@@ -1,12 +1,11 @@
-export const getMain = async (host: string) => {
+import { IMainProps } from "../types";
+
+export const getMain = async (host: string): Promise<IMainProps> => {
   // potential temporary fix till nextjs addresses this issue
-  console.log(host);
+  // console.log(host);
   const baseUrl =
     host === "localhost:3000" ? `http://localhost:3000` : `https://${host}`;
-  console.log("baseUrl is", baseUrl);
-  console.log("request made to: ", `${baseUrl}/api/main`);
-  // const res = await fetch(
-  //   process.env.URL + "/api/main",
+
   const res = await fetch(
     `${baseUrl}/api/main`,
     // {
@@ -20,7 +19,7 @@ export const getMain = async (host: string) => {
       },
     }
   );
-  console.log(res);
+  // console.log(res);
 
   if (!res.ok) {
     throw new Error("Failed to fetch data");

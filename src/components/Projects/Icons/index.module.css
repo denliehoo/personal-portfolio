@@ -1,0 +1,7 @@
+.icons {
+  display: flex;
+  margin-top: 5px;
+  gap: 10px;
+  margin-left: 5px;
+  cursor: pointer !important;
+}
