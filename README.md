@@ -1,8 +1,11 @@
 # Introduction
-A personal portfolio application to display projects and experiences. Built with next js 13 App Router and deployed on Vercel. 
+
+A personal portfolio application to display projects and experiences. Built with next js 13 App Router and deployed on Vercel.
 
 # Instructions
+
 ## .env
+
 Create a .env file in root with this:
 
 ```Javascript
