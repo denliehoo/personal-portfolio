@@ -15,7 +15,11 @@ export async function GET() {
     });
 
   const { client, db } = await connectToDatabase();
-  const experiences = await db.collection("experiences").find().toArray();
+  const experiences = await db
+    .collection("experiences")
+    .find()
+    .sort({ order: -1 }) // TODO: Refactor to date instead of using order
+    .toArray();
   let allProjects = await db
     .collection("projects")
     .find()
