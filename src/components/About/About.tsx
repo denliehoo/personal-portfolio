@@ -2,12 +2,11 @@ const About = () => {
   return (
     <>
       <p>
-        My name is Denlie Hoo. I'm a software engineer specializing in
-        full-stack web and blockchain development. My expertise includes React
-        for the frontend, Node.js and MongoDB for the backend, and Solidity for
-        blockchain. I also have experience in mobile development using React
-        Native. My professional background focuses on Fintech, Cryptocurrency,
-        and Web3.
+        My name is Denlie Hoo. I'm a software engineer specializing in frontend
+        development with React, and I have experience in backend development
+        (Node.js, Express, MongoDB), cross-platform mobile development (React
+        Native), and smart contract development (Solidity). My professional
+        background focuses on Fintech, Cryptocurrency, and Web3.
       </p>
       <p>
         I started programming with Microsoft Excel VBA before my studies at
