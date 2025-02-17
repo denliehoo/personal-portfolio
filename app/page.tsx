@@ -1,4 +1,4 @@
-import Main from "@/src/components/Main/Main";
+import Main from "@/src/views/main";
 import { getMain } from "@/src/utils/clientApi";
 import { headers } from "next/headers";
 

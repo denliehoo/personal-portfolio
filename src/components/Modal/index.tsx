@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import classes from "./Backdrop.module.css";
+import classes from "./index.module.css";
 
 interface BackdropProps {
   isOpen: boolean;

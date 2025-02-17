@@ -1,6 +1,6 @@
 import { FC } from "react";
-import Tooltip from "../../UI/Tooltip/Tooltip";
-import LogoRedirect from "../../UI/LogoRedirect/LogoRedirect";
+import Tooltip from "../../Tooltip";
+import LogoRedirect from "../../logo-redirect";
 import { EInteractableIcons } from "@/src/enum";
 
 interface IProjectIcon {

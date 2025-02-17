@@ -1,8 +1,8 @@
 "use client";
 import { useWindowSize } from "@/src/hooks/useWindowSize";
-import MenuNavbar from "../Navbar/MenuNavbar";
-import Navbar from "../Navbar/Navbar";
-import classes from "./Layout.module.css";
+import MenuNavbar from "../Navbar/menu";
+import Navbar from "../Navbar";
+import classes from "./index.module.css";
 import { useEffect, useState } from "react";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

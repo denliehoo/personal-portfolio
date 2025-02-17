@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactElement } from "react";
-import classes from "./LogoRedirect.module.css";
+import classes from "./index.module.css";
 import { EInteractableIcons } from "@/src/enum";
 
 interface LogoRedirectProps {

@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
-import classes from "./Navbar.module.css";
-import LogoRedirect from "../LogoRedirect/LogoRedirect";
-import TypingEffect from "./TypingEffect";
+import classes from "./index.module.css";
+import LogoRedirect from "../logo-redirect";
+import TypingEffect from "./typing-effect";
 import { FC, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { EInteractableIcons } from "@/src/enum";

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import classes from "./ProjectDetails.module.css";
-import LogoRedirect from "@/src/components/UI/LogoRedirect/LogoRedirect";
+import classes from "./index.module.css";
+import LogoRedirect from "@/src/components/logo-redirect";
 import { IProject } from "@/src/types/index";
 import Image from "next/image";
 import { EInteractableIcons } from "@/src/enum";

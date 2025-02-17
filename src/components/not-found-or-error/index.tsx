@@ -1,5 +1,5 @@
 import Link from "next/link";
-import classes from "./NotFoundOrError.module.css";
+import classes from "./index.module.css";
 
 const NotFoundOrError: React.FC<{ isError: boolean }> = ({ isError }) => {
   return (

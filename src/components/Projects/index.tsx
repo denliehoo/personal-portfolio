@@ -1,6 +1,6 @@
 "use client";
 
-import classes from "./Project.module.css";
+import classes from "./index.module.css";
 import Image from "next/image";
 import { IProject } from "../../types";
 import { FC } from "react";

@@ -1,6 +1,5 @@
 import React, { useState, ReactNode, ReactElement } from "react";
-import styles from "./Tooltip.module.css"; // Import your CSS module
-
+import styles from "./index.module.css";
 interface TooltipProps {
   text: string;
   children: ReactNode;

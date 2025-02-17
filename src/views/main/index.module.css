@@ -11,18 +11,6 @@
   scroll-margin-top: 3px;
 }
 
-.view {
-  margin-top: 30px;
-  background-color: transparent;
-  color: wheat;
-  border: none;
-  font-size: 14px;
-}
-.view:hover {
-  color: #d2b48c;
-  cursor: pointer;
-}
-
 @media (max-width: 700px) {
   .container {
     padding-top: 0px;

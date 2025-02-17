@@ -1,8 +1,8 @@
 "use client";
 import { FC, useEffect, useState } from "react";
 
-import Navbar from "./Navbar";
-import Backdrop from "../Modal/Backdrop";
+import Navbar from "..";
+import Backdrop from "../../Modal";
 
 interface IMenuNavBar {
   isJustOpened: boolean;

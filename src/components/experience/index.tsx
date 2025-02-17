@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { IExperience } from "../../types";
-import classes from "./Experience.module.css";
+import classes from "./index.module.css";
 
 const Experience: FC<{ experience: IExperience }> = ({ experience }) => {
   const { date, title, company, pointers } = experience;

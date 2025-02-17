@@ -1,7 +1,7 @@
 import { EInteractableIcons } from "@/src/enum";
 import { IProject } from "@/src/types";
 import { FC } from "react";
-import ProjectIcon from "./ProjectIcon";
+import ProjectIcon from "./project-icon";
 import classes from "./index.module.css";
 
 interface IProjectIcons

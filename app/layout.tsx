@@ -1,6 +1,6 @@
+import Layout from "@/src/components/Layout";
 import "./globals.css";
 import type { Metadata } from "next";
-import Layout from "@/src/components/UI/Layout/Layout";
 
 export const metadata: Metadata = {
   title: "Denlie Hoo",
