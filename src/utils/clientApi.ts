@@ -5,7 +5,7 @@ export const getMain = async (host: string): Promise<IMainProps> => {
   // potential temporary fix till nextjs addresses this issue
   // console.log(host);
   const baseUrl =
-    host === "localhost:3000" ? `http://localhost:3000` : `https://${host}`;
+    host.startsWith("localhost") ? `http://${host}` : `https://${host}`;
 
   console.log("Fetching Main Api");
   const res = await fetch(
