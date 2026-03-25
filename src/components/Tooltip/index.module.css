@@ -7,19 +7,21 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #333;
-  color: wheat;
-  padding: 5px 10px;
+  background-color: rgba(30, 30, 40, 0.95);
+  color: var(--color-primary);
+  padding: 4px 10px;
   margin-top: 5px;
-  border-radius: 5px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border);
   white-space: nowrap;
   z-index: 1;
-  visibility: hidden; /* Initially hidden */
-  opacity: 0; /* Initially transparent */
+  font-size: 12px;
+  visibility: hidden;
+  opacity: 0;
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .tooltip.show {
-  visibility: visible; /* Show the tooltip */
-  opacity: 1; /* Fully opaque */
+  visibility: visible;
+  opacity: 1;
 }

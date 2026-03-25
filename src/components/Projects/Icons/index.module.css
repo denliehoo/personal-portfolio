@@ -1,7 +1,6 @@
 .icons {
   display: flex;
-  margin-top: 5px;
+  margin-top: 8px;
   gap: 10px;
-  margin-left: 5px;
-  cursor: pointer !important;
+  margin-left: 2px;
 }

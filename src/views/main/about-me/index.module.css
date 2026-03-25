@@ -1,0 +1,17 @@
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: rgba(212, 167, 106, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(212, 167, 106, 0.2);
+  letter-spacing: 0.3px;
+}

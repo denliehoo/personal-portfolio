@@ -1,3 +1,4 @@
+"use client";
 import Experience from "@/src/components/experience";
 import { IMainProps } from "@/src/types";
 import React, { FC } from "react";
@@ -7,8 +8,7 @@ interface IExperiencesList extends Pick<IMainProps, "experiences"> {}
 const ExperienceList: FC<IExperiencesList> = ({ experiences }) => {
   return (
     <>
-      {/* For testing of experience 
-        {/* <Experience key={"asdasdasd"} experience={{ ...exp }} /> */}
+      <h2 className="section-title">Experiences</h2>
       {experiences.map((e) => (
         <Experience
           key={e._id.toString()}

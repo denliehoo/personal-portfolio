@@ -1,3 +1,4 @@
+"use client";
 import Project from "@/src/components/Projects";
 import classes from "./index.module.css";
 import { IMainProps } from "@/src/types";
@@ -10,18 +11,12 @@ const ProjectList: FC<IProjectList> = ({ pinned, others }) => {
 
   return (
     <>
+      <h2 className="section-title">Projects</h2>
       {pinned.map((p) => (
         <Project key={p._id.toString()} {...p} />
       ))}
-      <div
-        style={{
-          display: viewOthers ? "inline" : "none",
-        }}
-      >
-        {others.map((p) => (
-          <Project key={p._id.toString()} {...p} />
-        ))}
-      </div>
+      {viewOthers &&
+        others.map((p) => <Project key={p._id.toString()} {...p} />)}
       <button
         className={classes.view}
         onClick={() => setViewOthers(!viewOthers)}

@@ -1,75 +1,67 @@
 .card {
   display: flex;
-  justify-content: space-between;
   position: relative;
-
-  /* the left and right spacing */
   padding: 0 5%;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .left {
   padding-left: 20px;
-  flex: 0 0 auto; /* Prevent left div from growing */
-  width: 300px; /* Set a fixed width for the left div */
-
+  flex: 0 0 auto;
+  width: 280px;
   position: sticky;
-  top: 0; /* Stick to the top of the parent container */
-  height: 100%; /* Make sure it takes the full height of the container */
+  top: 0;
+  height: 100vh;
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .right {
-  padding: 10px;
-  padding-bottom: 100px;
-
-  flex: 1; /* Allow right div to grow and take available space */
+  padding: 10px 10px 100px;
+  flex: 1;
+  min-width: 0;
 }
+
 .top {
   display: none;
 }
 
 @media (min-width: 1000px) {
-  .card {
-    width: 1000px;
-    justify-content: center;
-  }
   .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
+    min-height: 100vh;
   }
 }
 
 @media (max-width: 1000px) {
   .left {
-    width: 250px;
+    width: 240px;
   }
   .card {
-    padding: 0 1%;
+    padding: 0 2%;
   }
 }
 
-/* breaking point to hamburger menu */
 @media (max-width: 700px) {
   .card {
     display: flex;
     flex-direction: column;
-
-    padding: 0 0;
+    padding: 0;
   }
   .top {
-    display: inline;
-    /*  for top */
+    display: block;
     z-index: 1000;
-    flex: 0 0 auto; /* Prevent top div from growing */
+    flex: 0 0 auto;
     position: sticky;
-    top: 0; /* Stick to the top of the parent container */
-
-    padding: 10px;
-    border-bottom: 1px solid wheat;
-
-    background-color: #000000;
+    top: 0;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(10, 10, 15, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
   .left {
     display: none;
@@ -84,24 +76,29 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .icon {
   cursor: pointer;
-  width: 20px;
-  height: 20px;
-  fill: wheat;
-  transition: transform 0.2s fill 0.2s;
+  width: 22px;
+  height: 22px;
+  fill: var(--color-primary);
+  transition: transform var(--transition-base), fill var(--transition-base);
 }
 
 .icon:hover {
-  transform: scale(1.1);
-  fill: #d2b48c;
+  transform: scale(1.15);
+  fill: var(--color-accent);
 }
 
 .name {
-  font-size: 24px;
-  font-weight: bold;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
+
 .active {
-  font-style: italic;
-  font-weight: bold;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
 }
