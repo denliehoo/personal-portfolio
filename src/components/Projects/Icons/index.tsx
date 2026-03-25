@@ -16,7 +16,7 @@ const ProjectIcons: FC<IProjectIcons> = ({ github, website, medium }) => {
   return (
     <div className={classes.icons}>
       {iconList.map(({ url, icon }) => (
-        <ProjectIcon url={url} icon={icon} />
+        <ProjectIcon key={icon} url={url} icon={icon} />
       ))}
     </div>
   );

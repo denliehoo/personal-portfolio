@@ -7,7 +7,7 @@ import { headers } from "next/headers";
 // /api/main
 
 export async function GET() {
-  const headersList = headers();
+  const headersList = await headers();
   const auth = headersList.get("Authorization");
   if (auth !== process.env.API_KEY)
     return new Response("You are not authorized", {

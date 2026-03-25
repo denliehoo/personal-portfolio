@@ -3,7 +3,7 @@ import { getMain } from "@/src/utils/clientApi";
 import { headers } from "next/headers";
 
 const HomePage = async () => {
-  const host = headers().get("host");
+  const host = (await headers()).get("host");
 
   const main = await getMain(host || "");
   const { pinned, others, experiences } = main;
