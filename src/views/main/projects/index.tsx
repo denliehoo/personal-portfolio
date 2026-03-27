@@ -2,7 +2,7 @@
 import Project from "@/src/components/Projects";
 import classes from "./index.module.css";
 import React, { useState } from "react";
-import { pinned, others } from "@/src/content/projects";
+import { pinnedProjects, otherProjects } from "@/src/content/projects";
 
 const ProjectList = () => {
   const [viewOthers, setViewOthers] = useState(false);
@@ -10,11 +10,11 @@ const ProjectList = () => {
   return (
     <>
       <h2 className="section-title">Projects</h2>
-      {pinned.map((p) => (
+      {pinnedProjects.map((p) => (
         <Project key={p._id} {...p} />
       ))}
       {viewOthers &&
-        others.map((p) => <Project key={p._id} {...p} />)}
+        otherProjects.map((p) => <Project key={p._id} {...p} />)}
       <button
         className={classes.view}
         onClick={() => setViewOthers(!viewOthers)}

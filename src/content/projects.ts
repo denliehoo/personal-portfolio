@@ -1,21 +1,20 @@
 import { IProject } from "@/src/types";
 
-export const pinned: IProject[] = [
+export const pinnedProjects: IProject[] = [
   {
     _id: "recurcrypt",
     imgSrc: "https://i.imgur.com/aergOSA.png",
     imgAlt: "recurcrypt",
     name: "RecurCrypt",
     shortDescription:
-      "Software-as-a-Service platform that enables vendors to accept recurring cryptocurrency payments (e.g. stables coins like USDT and USDC); Stripe but for cryptocurrency.",
+      "A full-stack recurring crypto payments platform \u2014 Stripe, but for cryptocurrency. Features smart contract-based transfers, serverless billing via AWS Lambda, and automated monorepo deployments.",
     medium:
       "https://medium.com/@denliehoo/building-recurcrypt-a-recurring-cryptocurrency-payments-application-af72cf61d918",
     website: "",
     github: "https://github.com/denliehoo/recurring-crypto-payments",
     longDescription: [],
     path: "recurcrypt",
-    isPinned: true,
-    tags: ["React", "Solidity", "Express", "Node", "MongoDB", "AWS", "Material UI"],
+    tags: ["MongoDB", "Express.js", "React", "Node.js", "TypeScript", "Solidity", "AWS", "GitHub Actions"],
   },
   {
     _id: "multiswap",
@@ -23,34 +22,46 @@ export const pinned: IProject[] = [
     imgAlt: "multiswap",
     name: "Multiswap",
     shortDescription:
-      "Swap multiple cryptocurrency coins/tokens to and fro within one transaction. Swap is routed through Decentralised Exchanges (DeX) such as Uniswap and Spookyswap.",
+      "Multi-chain token swapping across decentralized exchanges like Uniswap and Spookyswap. Built with test-driven Solidity development and a Next.js frontend for contract interaction.",
     medium:
       "https://medium.com/@denliehoo/developing-multiswap-a-decentralized-application-for-swapping-to-and-fro-multiple-coins-tokens-20b10d45f1b",
     website: "https://multiswap.denliehoo.com",
     github: "https://github.com/denliehoo/multi-swap",
     longDescription: [],
     path: "multiswap",
-    isPinned: true,
-    tags: ["React", "Solidity"],
+    tags: ["React", "Solidity", "Next.js", "Web3.js", "Redux"],
   },
+  {
+    _id: "snap-cals",
+    imgSrc: "",
+    imgAlt: "snap-cals",
+    name: "Snap Cals",
+    shortDescription:
+      "An AI-powered mobile calorie tracker built end-to-end with a multi-agent AI workflow \u2014 PM, builder, and QA agents with separated concerns, structured skills, and architecture docs guiding code generation across sessions.",
+    medium: "",
+    website: "",
+    github: "https://github.com/denliehoo/snap-cals",
+    longDescription: [],
+    path: "snap-cals",
+    tags: ["React Native", "TypeScript", "Node.js", "Gemini API", "PostgreSQL", "Kiro CLI"],
+  },
+];
+
+export const otherProjects: IProject[] = [
   {
     _id: "portfolio",
     imgSrc: "https://i.imgur.com/izzmlnk.png",
     imgAlt: "portfolio",
     name: "Personal Portfolio",
     shortDescription:
-      "A personal portfolio application built with Next.js to display projects and experiences - you're on this page now!",
+      "This portfolio site \u2014 built with Next.js 16, server-side data fetching from MongoDB, and deployed on Vercel.",
     medium: "",
     website: "",
     github: "https://github.com/denliehoo/personal-portfolio",
     longDescription: [],
     path: "personal-portfolio",
-    isPinned: true,
-    tags: ["NextJS", "React"],
+    tags: ["Next.js", "TypeScript", "MongoDB", "Vercel"],
   },
-];
-
-export const others: IProject[] = [
   {
     _id: "farming-app",
     imgSrc: "https://i.imgur.com/MTVAz5x.png",
@@ -63,7 +74,6 @@ export const others: IProject[] = [
     github: "https://github.com/denliehoo/farming-app",
     longDescription: [],
     path: "farming-app",
-    isPinned: false,
     tags: ["React", "Solidity"],
   },
   {
@@ -78,7 +88,6 @@ export const others: IProject[] = [
     github: "https://github.com/denliehoo/project-tracker",
     longDescription: [],
     path: "project-tracker",
-    isPinned: false,
     tags: ["MongoDB", "Express", "React", "Node"],
   },
   {
@@ -93,7 +102,6 @@ export const others: IProject[] = [
     github: "https://github.com/denliehoo/expense-tracker-python",
     longDescription: [],
     path: "expense-tracker",
-    isPinned: false,
     tags: ["Python"],
   },
 ];

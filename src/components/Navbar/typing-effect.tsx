@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const TypingEffect: React.FC = () => {
   const phrases: string[] = [
+    "    Frontend Engineer               ",
     "    Full-Stack Developer               ",
     "    Blockchain Developer               ",
     "    Software Engineer               ",
@@ -29,7 +30,7 @@ const TypingEffect: React.FC = () => {
           setIsTyping(false);
           timeoutRef.current = window.setTimeout(
             () => setIsTyping(true),
-            speed
+            speed,
           ); // Pause before backspacing
         }
       } else {
@@ -39,7 +40,7 @@ const TypingEffect: React.FC = () => {
           timeoutRef.current = window.setTimeout(type, speed); // Backspace speed (adjust as needed)
         } else {
           setCurrentPhraseIndex(
-            (prevIndex) => (prevIndex + 1) % phrases.length
+            (prevIndex) => (prevIndex + 1) % phrases.length,
           );
           setIsTyping(true);
         }
