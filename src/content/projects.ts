@@ -3,7 +3,7 @@ import { IProject } from "@/src/types";
 export const pinnedProjects: IProject[] = [
   {
     _id: "recurcrypt",
-    imgSrc: "https://i.imgur.com/aergOSA.png",
+    imgSrc: "/images/projects/recur-crypt.png",
     imgAlt: "recurcrypt",
     name: "RecurCrypt",
     shortDescription:
@@ -18,7 +18,7 @@ export const pinnedProjects: IProject[] = [
   },
   {
     _id: "multiswap",
-    imgSrc: "https://i.imgur.com/YyfKwiD.png",
+    imgSrc: "/images/projects/multiswap.png",
     imgAlt: "multiswap",
     name: "Multiswap",
     shortDescription:
@@ -43,28 +43,28 @@ export const pinnedProjects: IProject[] = [
     github: "https://github.com/denliehoo/snap-cals",
     longDescription: [],
     path: "snap-cals",
-    tags: ["React Native", "TypeScript", "Node.js", "Gemini API", "PostgreSQL", "Kiro CLI"],
+    tags: ["React Native", "TypeScript", "Node.js", "Gemini API", "PostgreSQL", "Agentic AI"],
   },
 ];
 
 export const otherProjects: IProject[] = [
   {
     _id: "portfolio",
-    imgSrc: "https://i.imgur.com/izzmlnk.png",
+    imgSrc: "/images/projects/personal-portfolio.png",
     imgAlt: "portfolio",
     name: "Personal Portfolio",
     shortDescription:
-      "This portfolio site \u2014 built with Next.js 16, server-side data fetching from MongoDB, and deployed on Vercel.",
+      "This portfolio site \u2014 built with Next.js 16 and deployed on Vercel with fully static content.",
     medium: "",
     website: "",
     github: "https://github.com/denliehoo/personal-portfolio",
     longDescription: [],
     path: "personal-portfolio",
-    tags: ["Next.js", "TypeScript", "MongoDB", "Vercel"],
+    tags: ["Next.js", "TypeScript", "Vercel"],
   },
   {
     _id: "farming-app",
-    imgSrc: "https://i.imgur.com/MTVAz5x.png",
+    imgSrc: "/images/projects/farming-app.png",
     imgAlt: "farming-app",
     name: "Farming app",
     shortDescription:
@@ -78,7 +78,7 @@ export const otherProjects: IProject[] = [
   },
   {
     _id: "project-tracker",
-    imgSrc: "https://i.imgur.com/89BV8Vr.png",
+    imgSrc: "/images/projects/project-tracker.png",
     imgAlt: "project-tracker",
     name: "Project Tracker",
     shortDescription:
@@ -92,7 +92,7 @@ export const otherProjects: IProject[] = [
   },
   {
     _id: "expense-tracker",
-    imgSrc: "https://i.imgur.com/zTNfy6u.png",
+    imgSrc: "/images/projects/expense-tracker.png",
     imgAlt: "expense-tracker",
     name: "Expense Tracker",
     shortDescription:

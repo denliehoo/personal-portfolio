@@ -100,6 +100,12 @@ const Navbar: FC<INavbar> = ({ isSmallScreen, closeMenu, setActive }) => {
           url="https://www.linkedin.com/in/denlie-hoo/"
           icon={EInteractableIcons.LINKEDIN}
         />
+        <LogoRedirect
+          width={40}
+          height={40}
+          url="https://medium.com/@denliehoo"
+          icon={EInteractableIcons.MEDIUM}
+        />
       </div>
     </div>
   );
