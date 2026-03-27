@@ -1,14 +1,7 @@
 import Main from "@/src/views/main";
-import { getMain } from "@/src/utils/clientApi";
-import { headers } from "next/headers";
 
-const HomePage = async () => {
-  const host = (await headers()).get("host");
-
-  const main = await getMain(host || "");
-  const { pinned, others, experiences } = main;
-
-  return <Main pinned={pinned} experiences={experiences} others={others} />;
+const HomePage = () => {
+  return <Main />;
 };
 
 export default HomePage;

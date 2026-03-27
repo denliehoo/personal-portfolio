@@ -1,12 +1,11 @@
 "use client";
 import classes from "./index.module.css";
-import React, { useEffect, FC } from "react";
+import React, { useEffect } from "react";
 import About from "./about-me";
-import { IMainProps } from "@/src/types";
 import ProjectList from "./projects";
 import ExperienceList from "./experiences";
 
-const Main: FC<IMainProps> = ({ pinned, others, experiences }) => {
+const Main = () => {
   const scrollToSection = (sectionId: string) => {
     document
       .getElementById(sectionId)
@@ -28,10 +27,10 @@ const Main: FC<IMainProps> = ({ pinned, others, experiences }) => {
         <About />
       </section>
       <section id="projects" className={classes.projects}>
-        <ProjectList pinned={pinned} others={others} />
+        <ProjectList />
       </section>
       <section id="experiences" className={classes.experiences}>
-        <ExperienceList experiences={experiences} />
+        <ExperienceList />
       </section>
     </div>
   );
