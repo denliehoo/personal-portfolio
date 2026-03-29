@@ -22,17 +22,16 @@ const About = () => {
     <div ref={ref} className="fade-in">
       <h2 className="section-title">About</h2>
       <p>
-        I&apos;m a frontend engineer who builds high-scale trading platforms and
-        developer tooling. At Aquariux, I architect cross-platform applications
-        supporting US$20B+ in trading volume, lead build system migrations, and
-        design reusable component ecosystems across web and mobile.
+        I&apos;m a frontend engineer specializing in React, focused on frontend
+        architecture, build performance, and cross-platform UI systems. At
+        Aquariux, I architect cross-platform applications supporting US$20B+ in
+        trading volume, lead build system migrations, and design reusable
+        component ecosystems across web and mobile.
       </p>
       <p>
         My expertise spans the full stack — from React and React Native on the
         frontend, to Node.js and MongoDB on the backend, to Solidity smart
-        contracts on-chain. I&apos;m driven by solving complex frontend
-        architecture problems: microfrontend design, build performance,
-        cross-platform UI parity, and developer experience tooling.
+        contracts on-chain.
       </p>
       <p>
         I started programming with Microsoft Excel VBA before my studies at
