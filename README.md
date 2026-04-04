@@ -24,3 +24,7 @@ Open [http://localhost:3088](http://localhost:3088) with your browser to see the
 - **Projects**: Edit `src/content/projects.ts`
 - **Experiences**: Edit `src/content/experiences.ts`
 - **About**: Edit `src/views/main/about-me/index.tsx`
+
+## Notes
+
+- If >3 articles per experience, consider adding a dedicated "Articles" section and trimming experience links to top 1-2

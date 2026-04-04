@@ -12,6 +12,12 @@ export const pinnedExperiences: IExperience[] = [
       "Engineered a multi-package UI component ecosystem for React and React Native, decoupling shared components and core utilities into reusable NPM modules to ensure design parity across web and mobile",
       "Developed a custom MCP server integrated with Jira and GitLab APIs to automate ticket context retrieval and AI-driven code reviews, accelerating team development velocity",
     ],
+    articles: [
+      {
+        title: "Building a Custom MCP Server for Jira & GitLab",
+        url: "https://medium.com/@denliehoo/i-built-a-gitlab-ai-code-reviewer-using-mcp-up-to-30x-cheaper-than-claude-code-review-d97544fccc64",
+      },
+    ],
   },
   {
     _id: "tlv-dev",

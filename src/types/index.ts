@@ -17,5 +17,6 @@ export interface IExperience {
   title: string;
   company: string;
   pointers: string[];
+  articles?: { title: string; url: string }[];
   _id: string;
 }
