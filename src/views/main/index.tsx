@@ -26,11 +26,11 @@ const Main = () => {
       <section id="about" className={classes.about}>
         <About />
       </section>
-      <section id="projects" className={classes.projects}>
-        <ProjectList />
-      </section>
       <section id="experiences" className={classes.experiences}>
         <ExperienceList />
+      </section>
+      <section id="projects" className={classes.projects}>
+        <ProjectList />
       </section>
     </div>
   );

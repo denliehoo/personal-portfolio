@@ -26,7 +26,7 @@ const About = () => {
         architecture, developer tooling, and cross-platform UI systems.
       </p>
       <p>
-        My expertise spans the full stack — from React and React Native on the
+        My expertise spans the full stack, from React and React Native on the
         frontend, to Node.js and MongoDB on the backend, to Solidity smart
         contracts on-chain.
       </p>
@@ -36,9 +36,9 @@ const About = () => {
         finance. During my final year, I discovered my true passion for
         programming. I took a semester off, interned at a fintech company, and
         transitioned to a full-time engineering role after graduating in 2021.
-        Since then, I&apos;ve been committed to pushing the boundaries of
-        frontend engineering — from optimizing build pipelines to architecting
-        component ecosystems that scale across platforms.
+        Since then, I&apos;ve focused on frontend engineering, from optimizing
+        build pipelines and building developer tooling to architecting component
+        ecosystems that scale across platforms.
       </p>
       <div className={classes.techStack}>
         {TECH_STACK.map((tech) => (

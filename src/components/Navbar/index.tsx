@@ -15,8 +15,8 @@ interface INavbar {
 
 const NAV_ITEMS = [
   { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
   { id: "experiences", label: "Experiences" },
+  { id: "projects", label: "Projects" },
 ];
 
 const Navbar: FC<INavbar> = ({ isSmallScreen, closeMenu, setActive }) => {
