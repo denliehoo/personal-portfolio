@@ -1,10 +1,10 @@
 .logo {
   cursor: pointer;
-  transition: transform 0.2s;
-  fill: #f5deb3;
+  transition: transform var(--transition-base), fill var(--transition-base);
+  fill: var(--color-primary-dim);
 }
 
 .logo:hover {
-  transform: scale(1.05);
-  fill: #d2b48c;
+  transform: scale(1.1);
+  fill: var(--color-accent);
 }

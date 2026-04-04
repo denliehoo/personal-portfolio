@@ -17,16 +17,15 @@ const ProjectDetails: FC<{ project: IProject }> = ({ project }) => {
     medium,
     website,
     github,
-    isPinned,
   } = project;
   return (
     <div className={classes.container}>
       <div className={classes.top}>
         <Link
-          href={isPinned ? "/#pinned" : "/#others"}
+          href="/#projects"
           className={classes.back}
         >
-          &#8592; Back To {isPinned ? "Pinned" : "Other"} Projects
+          &#8592; Back To Projects
         </Link>
 
         <div className={classes.name}>{name}</div>

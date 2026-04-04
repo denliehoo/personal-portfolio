@@ -3,21 +3,21 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  cursor: default;
 }
 
 .loader {
-  color: wheat;
-  /* font-family: Consolas, Menlo, Monaco, monospace; */
+  color: var(--color-primary);
   font-weight: bold;
-  font-size: 78px;
-  opacity: 0.8;
+  font-size: 72px;
+  opacity: 0.6;
 }
+
 .loader:before {
   content: "<";
   display: inline-block;
   animation: pulse 0.4s alternate infinite ease-in-out;
 }
+
 .loader:after {
   content: ">";
   display: inline-block;
@@ -27,6 +27,6 @@
 @keyframes pulse {
   to {
     transform: scale(0.9);
-    opacity: 0.5;
+    opacity: 0.3;
   }
 }

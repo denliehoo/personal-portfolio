@@ -1,19 +1,10 @@
 # Introduction
 
-A personal portfolio application to display projects and experiences. Built with next js 13 App Router and deployed on Vercel.
+A personal portfolio application to display projects and experiences. Built with Next.js 16 and deployed on Vercel.
 
-# Instructions
+Content is stored as static TypeScript files in `src/content/`.
 
-## .env
-
-Create a .env file in root with this:
-
-```Javascript
-REACT_APP_DB_URL=mongodb+srv://USERNAMEHERE:PASSWORDHERE@DBNAME.mongodb.net/COLLECTIONNAME?retryWrites=true&w=majority
-API_KEY=APIKEYHERE
-```
-
-## Image Guidelines:
+## Image Guidelines
 
 - Images should be 1440x700 px; If want to screenshot, ensure to set screensize (e.g. in chrome) to 1440x700px
 - If edit in Canva to add title: Fonts: Apricots, 170px, color: #F5DEB3
@@ -26,4 +17,14 @@ To run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3088](http://localhost:3088) with your browser to see the result.
+
+## Editing Content
+
+- **Projects**: Edit `src/content/projects.ts`
+- **Experiences**: Edit `src/content/experiences.ts`
+- **About**: Edit `src/views/main/about-me/index.tsx`
+
+## Notes
+
+- If >3 articles per experience, consider adding a dedicated "Articles" section and trimming experience links to top 1-2

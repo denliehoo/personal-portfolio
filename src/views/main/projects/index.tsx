@@ -1,27 +1,20 @@
+"use client";
 import Project from "@/src/components/Projects";
 import classes from "./index.module.css";
-import { IMainProps } from "@/src/types";
-import React, { FC, useState } from "react";
+import React, { useState } from "react";
+import { pinnedProjects, otherProjects } from "@/src/content/projects";
 
-interface IProjectList extends Pick<IMainProps, "pinned" | "others"> {}
-
-const ProjectList: FC<IProjectList> = ({ pinned, others }) => {
+const ProjectList = () => {
   const [viewOthers, setViewOthers] = useState(false);
 
   return (
     <>
-      {pinned.map((p) => (
-        <Project key={p._id.toString()} {...p} />
+      <h2 className="section-title">Projects</h2>
+      {pinnedProjects.map((p) => (
+        <Project key={p._id} {...p} />
       ))}
-      <div
-        style={{
-          display: viewOthers ? "inline" : "none",
-        }}
-      >
-        {others.map((p) => (
-          <Project key={p._id.toString()} {...p} />
-        ))}
-      </div>
+      {viewOthers &&
+        otherProjects.map((p) => <Project key={p._id} {...p} />)}
       <button
         className={classes.view}
         onClick={() => setViewOthers(!viewOthers)}
