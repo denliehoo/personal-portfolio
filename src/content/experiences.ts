@@ -17,6 +17,10 @@ export const pinnedExperiences: IExperience[] = [
         title: "Building a Custom MCP Server for Jira & GitLab",
         url: "https://medium.com/@denliehoo/i-built-a-gitlab-ai-code-reviewer-using-mcp-up-to-30x-cheaper-than-claude-code-review-d97544fccc64",
       },
+      {
+        title: "Migrating from Webpack to Rspack",
+        url: "https://medium.com/@denliehoo/9x-faster-3x-less-memory-why-we-migrated-from-webpack-to-rspack-a784c21a7202",
+      },
     ],
   },
   {
