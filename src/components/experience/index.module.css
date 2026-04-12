@@ -85,6 +85,10 @@
   transition: opacity var(--transition-base);
 }
 
+.linkIcon {
+  flex-shrink: 0;
+}
+
 .articleLink:hover {
   opacity: 0.7;
 }

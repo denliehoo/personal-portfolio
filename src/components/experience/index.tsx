@@ -45,7 +45,7 @@ const Experience: FC<{ experience: IExperience }> = ({ experience }) => {
                 rel="noopener noreferrer"
                 className={classes.articleLink}
               >
-                <ExternalLinkIcon />
+                <span className={classes.linkIcon}><ExternalLinkIcon /></span>
                 {a.title}
               </a>
             ))}
