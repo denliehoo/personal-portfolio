@@ -32,7 +32,8 @@ export const pinnedProjects: IProject[] = [
     name: "Snap Cals",
     shortDescription:
       "An AI-powered mobile calorie tracker built end-to-end with a multi-agent AI workflow \u2014 PM, builder, and QA agents with separated concerns, structured skills, and architecture docs guiding code generation across sessions.",
-    medium: "",
+    medium:
+      "https://medium.com/@denliehoo/beyond-vibe-coding-how-i-built-a-full-stack-calorie-tracking-app-in-under-a-week-4d84c4fb5f9f",
     website: "",
     github: "https://github.com/denliehoo/snap-cals",
     longDescription: [],
