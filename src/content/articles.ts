@@ -13,14 +13,15 @@ export const articles: IArticle[] = [
     sourceLabel: "Aquariux Fintech",
   },
   {
-    _id: "mcp-gitlab-code-review",
-    title: "Building a Custom MCP Server for Jira & GitLab",
-    url: "https://medium.com/@denliehoo/i-built-a-gitlab-ai-code-reviewer-using-mcp-up-to-30x-cheaper-than-claude-code-review-d97544fccc64",
+    _id: "snap-cals-article",
+    title:
+      "Beyond Vibe Coding: How I Built a Full-Stack Calorie Tracking App in Under a Week",
+    url: "https://medium.com/@denliehoo/beyond-vibe-coding-how-i-built-a-full-stack-calorie-tracking-app-in-under-a-week-4d84c4fb5f9f",
     description:
-      "Built a custom MCP server integrating Jira and GitLab APIs for automated AI-driven code reviews — up to 30× cheaper than Claude Code Review.",
-    tags: ["AI", "MCP", "GitLab", "Code Review"],
-    source: "work",
-    sourceLabel: "Aquariux Fintech",
+      "Building a full-stack app with a multi-agent AI workflow — PM, builder, and QA agents with separated concerns and structured skills.",
+    tags: ["Agentic AI", "React Native", "Full-Stack"],
+    source: "project",
+    sourceLabel: "Snap Cals",
   },
   {
     _id: "webpack-to-rspack",
@@ -33,15 +34,14 @@ export const articles: IArticle[] = [
     sourceLabel: "Aquariux Fintech",
   },
   {
-    _id: "snap-cals-article",
-    title:
-      "Beyond Vibe Coding: How I Built a Full-Stack Calorie Tracking App in Under a Week",
-    url: "https://medium.com/@denliehoo/beyond-vibe-coding-how-i-built-a-full-stack-calorie-tracking-app-in-under-a-week-4d84c4fb5f9f",
+    _id: "mcp-gitlab-code-review",
+    title: "Building a Custom MCP Server for Jira & GitLab",
+    url: "https://medium.com/@denliehoo/i-built-a-gitlab-ai-code-reviewer-using-mcp-up-to-30x-cheaper-than-claude-code-review-d97544fccc64",
     description:
-      "Building a full-stack app with a multi-agent AI workflow — PM, builder, and QA agents with separated concerns and structured skills.",
-    tags: ["Agentic AI", "React Native", "Full-Stack"],
-    source: "project",
-    sourceLabel: "Snap Cals",
+      "Built a custom MCP server integrating Jira and GitLab APIs for automated AI-driven code reviews — up to 30× cheaper than Claude Code Review.",
+    tags: ["AI", "MCP", "GitLab", "Code Review"],
+    source: "work",
+    sourceLabel: "Aquariux Fintech",
   },
   {
     _id: "recurcrypt-article",
