@@ -20,3 +20,13 @@ export interface IExperience {
   articles?: { title: string; url: string }[];
   _id: string;
 }
+
+export interface IArticle {
+  _id: string;
+  title: string;
+  url: string;
+  description: string;
+  tags: string[];
+  source: "work" | "project";
+  sourceLabel: string;
+}

@@ -17,6 +17,7 @@ const NAV_ITEMS = [
   { id: "about", label: "About" },
   { id: "experiences", label: "Experiences" },
   { id: "projects", label: "Projects" },
+  { id: "articles", label: "Articles" },
 ];
 
 const Navbar: FC<INavbar> = ({ isSmallScreen, closeMenu, setActive }) => {

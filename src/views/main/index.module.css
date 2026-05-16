@@ -4,14 +4,16 @@
 
 .about,
 .projects,
-.experiences {
+.experiences,
+.articles {
   margin-bottom: 48px;
   padding-bottom: 48px;
   scroll-margin-top: 3px;
 }
 
 .about,
-.experiences {
+.experiences,
+.projects {
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -21,7 +23,8 @@
   }
   .about,
   .projects,
-  .experiences {
+  .experiences,
+  .articles {
     scroll-margin-top: 70px;
     margin-bottom: 32px;
     padding-bottom: 32px;
