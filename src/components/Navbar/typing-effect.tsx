@@ -3,8 +3,8 @@ import React, { useState, useEffect, useRef } from "react";
 const TypingEffect: React.FC = () => {
   const phrases: string[] = [
     "    Frontend Engineer               ",
+    "    AI Engineer               ",
     "    Full-Stack Developer               ",
-    "    Blockchain Developer               ",
     "    Software Engineer               ",
   ];
 

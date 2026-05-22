@@ -11,6 +11,8 @@ const TECH_STACK = [
   "MongoDB",
   "Solidity",
   "AWS",
+  "RAG",
+  "MCP",
   "Rspack",
   "Microfrontend",
 ];
@@ -22,23 +24,22 @@ const About = () => {
     <div ref={ref} className="fade-in">
       <h2 className="section-title">About</h2>
       <p>
-        I&apos;m a frontend engineer specializing in React, focused on frontend
-        architecture, developer tooling, and cross-platform UI systems.
+        Frontend and AI engineer specializing in web development with React. My
+        experience spans the full stack, from mobile development with React
+        Native to backend development with Node.js and MongoDB.
       </p>
       <p>
-        My expertise spans the full stack, from React and React Native on the
-        frontend, to Node.js and MongoDB on the backend, to Solidity smart
-        contracts on-chain.
+        I started programming with Microsoft Excel VBA in 2017 before my studies
+        at Nanyang Business School, initially aiming for a career in finance.
+        During my final year, I discovered my true passion for programming. I
+        took a semester off, interned at a fintech company, and transitioned to
+        a full-time engineering role after graduating in 2021.
       </p>
       <p>
-        I started programming with Microsoft Excel VBA before my studies at
-        Nanyang Business School in 2017, initially aiming for a career in
-        finance. During my final year, I discovered my true passion for
-        programming. I took a semester off, interned at a fintech company, and
-        transitioned to a full-time engineering role after graduating in 2021.
-        Since then, I&apos;ve focused on frontend engineering, from optimizing
-        build pipelines and building developer tooling to architecting component
-        ecosystems that scale across platforms.
+        Since then, I've focused on frontend and AI engineering. My work ranges
+        from architecting scalable cross-platform component ecosystems and
+        optimizing developer tooling and build pipelines, to streamlining
+        workflows using AI and RAG-enhanced solutions.
       </p>
       <div className={classes.techStack}>
         {TECH_STACK.map((tech) => (

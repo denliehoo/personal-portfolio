@@ -11,6 +11,7 @@ export const pinnedExperiences: IExperience[] = [
       "Led the migration from Webpack to Rspack across projects, achieving 9\u00D7 faster build times and a 10% reduction in bundle size. Conducted a company-wide tech sharing on the architectural evaluation and implementation strategy",
       "Engineered a multi-package UI component ecosystem for React and React Native, decoupling shared components and core utilities into reusable NPM modules to ensure design parity across web and mobile",
       "Developed a custom MCP server integrated with Jira and GitLab APIs to automate ticket context retrieval and AI-driven code reviews, accelerating team development velocity",
+      "Built a Slack-integrated AI support agent using AWS Bedrock and n8n featuring thread-persistent memory and a RAG-based Knowledge Base synced via S3 for repository insights and technical troubleshooting",
     ],
     articles: [
       {
