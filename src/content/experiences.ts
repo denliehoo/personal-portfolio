@@ -15,6 +15,10 @@ export const pinnedExperiences: IExperience[] = [
     ],
     articles: [
       {
+        title: "I Built a Slack Chatbot With n8n and AWS Bedrock Knowledge Base",
+        url: "https://medium.com/@denliehoo/i-built-a-slack-chatbot-with-n8n-and-aws-bedrock-knowledge-base-4ebaa2247178",
+      },
+      {
         title: "Building a Custom MCP Server for Jira & GitLab",
         url: "https://medium.com/@denliehoo/i-built-a-gitlab-ai-code-reviewer-using-mcp-up-to-30x-cheaper-than-claude-code-review-d97544fccc64",
       },
