@@ -3,10 +3,10 @@ import { IArticle } from "@/src/types";
 export const articles: IArticle[] = [
   {
     _id: "slack-chatbot-n8n-bedrock",
-    title: "I Built a Slack Chatbot With n8n and AWS Bedrock Knowledge Base",
+    title: "I Built a Slack Chatbot With n8n and AWS Bedrock",
     url: "https://medium.com/@denliehoo/i-built-a-slack-chatbot-with-n8n-and-aws-bedrock-knowledge-base-4ebaa2247178",
     description:
-      "Building a RAG-powered Slack chatbot using n8n and AWS Bedrock Knowledge Base to help support teams troubleshoot issues.",
+      "Building a RAG-powered Slack chatbot using n8n and AWS Bedrock to help support teams troubleshoot issues.",
     tags: ["AI", "AWS Bedrock", "n8n", "RAG"],
     source: "work",
     sourceLabel: "Aquariux Fintech",

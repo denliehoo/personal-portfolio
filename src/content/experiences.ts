@@ -15,7 +15,7 @@ export const pinnedExperiences: IExperience[] = [
     ],
     articles: [
       {
-        title: "I Built a Slack Chatbot With n8n and AWS Bedrock Knowledge Base",
+        title: "I Built a Slack Chatbot With n8n and AWS Bedrock",
         url: "https://medium.com/@denliehoo/i-built-a-slack-chatbot-with-n8n-and-aws-bedrock-knowledge-base-4ebaa2247178",
       },
       {
