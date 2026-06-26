@@ -49,8 +49,8 @@ const About = () => {
         ))}
       </div>
       <div className={classes.certifications}>
-        AWS Certified Cloud Practitioner · AWS Certified AI Practitioner ·
-        Certified Scrum Master
+        AWS Certified Solutions Architect Associate · AWS Certified AI
+        Practitioner · Certified Scrum Master
       </div>
     </div>
   );
